@@ -1,0 +1,65 @@
+homebrew:
+  - git
+  - mas
+  - logi-options-plus
+  - alt-tab
+  - dotnet-sdk
+  - powershell
+  - azure-cli
+  - oh-my-posh
+  - raycast
+  - setapp
+  - 1password
+  - 1password-cli
+  - iterm2
+  - warp
+  - visual-studio-code
+  - vscodium
+  - docker
+#  - insomnia
+  - snagit
+  - beyond-compare
+  - figma
+  - notion
+  - obsidian
+  - raindropio
+  - microsoft-edge
+  - vivaldi
+#  - orion
+#  - arc
+#  - stack-stack
+  - pocket-casts
+  - discord
+  - microsoft-teams
+  - zoom
+  - elgato-control-center
+  - elgato-stream-deck
+  - logitune
+  - rewind
+#  - keycue
+
+appstore:
+  - 1569813296  #1Password for Safari
+  - 824171161   #Affinity Designer
+  - 824183456   #Affinity Photo
+#  - 1518425043  #Boop
+  - 6448461551  #Command X  
+#  - 1024640650  #CotEditor
+  - 411643860   #DaisyDisk
+#  - 1502527999  #Jiffy
+#  - 1622835804  #Kagi
+  - 405399194   #Kindle
+  - 462058435   #Microsoft Excel
+  - 985367838   #Microsoft Outlook
+  - 462062816   #Microsoft PowerPoint
+  - 1295203466  #Microsoft Remote Desktop
+#  - 1274495053  #Microsoft To Do
+  - 462054704   #Microsoft Word 
+  - 1563698880  #Mirror Magnet
+  - 823766827   #OneDrive
+#  - 1477385213  #Save to Pocket
+  - 1549370672  #Save to Raindrop.io
+  - 1640236961  #Save to Reader (Readwise)
+#  - 1522267256  #Shareful
+  - 803453959   #Slack
+  - 585829637   #Todoist
