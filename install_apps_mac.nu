@@ -6,7 +6,7 @@ print "Homebrew: Running update ..."
 
 /opt/homebrew/bin/brew tap homebrew/cask-fonts
 
-let $apps = (open ~/.dotfiles/apps_test.yaml)
+let $apps = (open ~/.dotfiles/apps.yaml)
 
 $apps.homebrew | each { 
     |it| $"exec( /opt/homebrew/bin/brew install ($it) )" | null
