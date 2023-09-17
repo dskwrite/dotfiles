@@ -18,5 +18,5 @@ fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # add configuration symlinks
-sudo nu install_apps_mac.nu
+sudo /opt/homebrew/bin/brew/nu ~/.dotfiles/install_apps_mac.nu
 # add mac settings
