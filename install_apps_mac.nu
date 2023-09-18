@@ -12,7 +12,7 @@ let $apps_homebrew_install_commands = ($apps.homebrew | each {
     |it| $"exec( /opt/homebrew/bin/brew install ($it) )"
 })
 
-let $apps_appstore_install_commands = (#$apps.appstore | each { 
+let $apps_appstore_install_commands = ($apps.appstore | each { 
     |it| $"exec( /opt/homebrew/bin/mas install ($it) )"
 })
 
