@@ -8,14 +8,17 @@ print "Homebrew: Running update ..."
 
 let $apps = (open ~/.dotfiles/apps.yaml)
 
-$apps.homebrew | each { 
-    |it| $"exec( /opt/homebrew/bin/brew install ($it) )" | null
-}
+let $apps_homebrew_install_commands = ($apps.homebrew | each { 
+    |it| $"exec( /opt/homebrew/bin/brew install ($it) )"
+})
 
-$apps.appstore | each { 
-    |it| $"exec( /opt/homebrew/bin/mas install ($it) )" | null
-}
+let $apps_appstore_install_commands = (#$apps.appstore | each { 
+    |it| $"exec( /opt/homebrew/bin/mas install ($it) )"
+})
 
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+$apps_homebrew_install_commands | null
+$apps_appstore_install_commands | null
+
+#curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 exit
