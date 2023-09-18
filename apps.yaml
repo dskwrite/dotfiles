@@ -1,9 +1,9 @@
 homebrew:
   - git
-  - mas
   - logi-options-plus
-  - alt-tab
+  - mas
   - dotnet-sdk
+  - alt-tab
   - powershell
   - azure-cli
   - oh-my-posh
