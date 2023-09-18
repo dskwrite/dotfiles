@@ -38,6 +38,7 @@ homebrew:
   - rewind
 #  - keycue
 
+
 appstore:
   - 1569813296  #1Password for Safari
   - 824171161   #Affinity Designer
@@ -63,3 +64,11 @@ appstore:
 #  - 1522267256  #Shareful
   - 803453959   #Slack
   - 585829637   #Todoist
+
+
+remove:
+  - '/Applications/GarageBand.app'
+  - '/Applications/iMovie.app'
+  - '/Applications/Keynote.app'
+  - '/Applications/Numbers.app'
+  - '/Applications/Pages.app'

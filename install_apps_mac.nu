@@ -8,17 +8,28 @@ print "Homebrew: Running update ..."
 
 let $apps = (open ~/.dotfiles/apps.yaml)
 
-let $apps_homebrew_install_commands = ($apps.homebrew | each { 
-    |it| $"exec( /opt/homebrew/bin/brew install ($it) )"
-})
+$apps.homebrew | each { 
+    /opt/homebrew/bin/brew install $in
+}
 
-let $apps_appstore_install_commands = ($apps.appstore | each { 
-    |it| $"exec( /opt/homebrew/bin/mas install ($it) )"
-})
+exit
 
-$apps_homebrew_install_commands | null
-$apps_appstore_install_commands | null
+$apps.appstore | each { 
+    /opt/homebrew/bin/mas install $in
+}
 
-#curl -fsSL https://get.pnpm.io/install.sh | sh -
+# addresses "VSCodium.app” can’t be opened because Apple cannot check it for malicious software.
+codesign --sign - --force --deep /Applications/VSCodium.app
+xattr -d com.apple.quarantine /Applications/VSCodium.app
+
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+ 
+$apps.remove | each {
+    if ( $in | path exists) { 
+        print $"Uninstalling ($in)"
+        trash $in 
+    }
+}
 
 exit
