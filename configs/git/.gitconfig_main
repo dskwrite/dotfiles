@@ -1,11 +1,11 @@
 [includeIf "gitdir:~/.dotfiles"]
-    path = .gitconfig_dskwrite
+    path = ~/.gitconfig_dskwrite
 
 [includeIf "gitdir:~/repos/dskwrite"]
-    path = .gitconfig_dskwrite
+    path = ~/.gitconfig_dskwrite
 
 [includeIf "gitdir:~/repos/work01"]
-    path = .gitconfig_work01
+    path = ~/.gitconfig_work01
 
 [includeIf "gitdir:~/repos/work02"]
-    path = .gitconfig_work02
+    path = ~/.gitconfig_work02
