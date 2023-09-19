@@ -1,0 +1,27 @@
+let $configs = open ~/.dotfiles/configs.yaml
+
+for $c in ( $configs | transpose ) {
+    let $config_dir = $c.column0
+    let $config_files = $c.column1
+    for $f in ( $config_files | transpose ) {
+        let $config_file = $f.column0
+        let $config_file_path = $"~/.dotfiles/configs/($config_dir)/($config_file)"
+        let $config_sym_link_path = $f.column1
+        let $config_sym_link_path_exists = $config_sym_link_path | path exists
+        let $backup_timestamp = date now | date to-timezone utc | format date '%Y_%m_%d_%H_%M_%S'
+
+        
+        if ( $config_sym_link_path_exists ) {
+            let $config_file_object =  (ls -a $config_sym_link_path | first )
+            if ( $config_file_object.type == 'file' ) {
+                cp ( $config_file_path | path expand ) ( $"($config_sym_link_path).backup.($backup_timestamp)" | path expand )
+            }
+
+            rm ( $config_sym_link_path | path expand )
+
+        }
+
+        ln -sf ( $config_file_path | path expand ) ( $config_sym_link_path | path expand )
+
+    }
+}

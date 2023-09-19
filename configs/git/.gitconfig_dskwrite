@@ -1,7 +1,6 @@
 [user]
         name = dskwrite
         email = 85462819+dskwrite@users.noreply.github.com
-        #https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address
 [init]
         defaultBranch = main
 [core]

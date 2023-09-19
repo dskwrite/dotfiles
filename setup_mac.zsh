@@ -19,4 +19,4 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # add configuration symlinks
 /opt/homebrew/bin/nu ~/.dotfiles/install_apps_mac.nu
-# add mac settings
+/opt/homebrew/bin/nu ~/.dotfiles/settings_mac.nu

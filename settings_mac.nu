@@ -8,34 +8,60 @@
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2021-16"
 
 #Disable the sound effects on boot
-sudo nvram SystemAudioValue=" "
+sudo nvram StartupMute=%01
 
 #Dark Mode
-defaults write NSGlobalDomain AppleInterfaceStyle Dark
+# this is now configured on the manual installation
+#defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
 #Don't show Spotlight in menu bar
-defaults remove com.apple.Spotlight "NSStatusItem Visible Item-0"
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# TODO: review what this does
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+# TODO: review what this does
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# TODO: review what this does
+#defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+
+###############################################################################
+# SOFTWARE UPDATES
+###############################################################################
+
+#TODO: check to see if these settings still work
+
+# Enable the automatic update check
+#defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+# Check for software updates daily, not just once per week
+#defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Download newly available updates in background
+#defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# Install System data files & security updates
+#defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+# Turn on app auto-update
+#defaults write com.apple.commerce AutoUpdate -bool true
 
 
 ###############################################################################
 # FINDER
 ###############################################################################
 
-# Finder: show hidden files by default
+# Finder: show hidden files by default 
 defaults write com.apple.finder AppleShowAllFiles -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -57,14 +83,26 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # DOCK
 ###############################################################################
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# Dock item size
+defaults write com.apple.dock tilesize -int 24
+
+# Dock items are magnified when hovering over them
+defaults write com.apple.dock magnification -bool true
+
+# Dock item hover size
+defaults write com.apple.dock largesize -int 96;
+
+# Only show active items
+defaults write com.apple.dock static-only -bool true
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Remove apps from dock
+defaults write com.apple.dock persistent-apps -array
 
 
 ###############################################################################
@@ -120,26 +158,6 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 
 ###############################################################################
-# APP STORE
-###############################################################################
-
-# Enable the automatic update check
-defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
-
-# Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-# Download newly available updates in background
-defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
-
-# Install System data files & security updates
-defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
-
-# Turn on app auto-update
-defaults write com.apple.commerce AutoUpdate -bool true
-
-
-###############################################################################
 # MESSAGES
 ###############################################################################
 
@@ -147,10 +165,18 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 
+##############
+# TODO
+##############
+# Software Updates > Install macOS updates
+# Software Updates > Install application updates from the App Store
+
+
+
+
 ###############################################################################
 # Kill affected applications
 ###############################################################################
-
 [
 	'Activity Monitor'
 	'Address Book'
@@ -167,9 +193,5 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ] | each {
 	killall $in
 }
-
-# Remove apps from dock
-defaults write com.apple.dock persistent-apps -array
-killall "Dock" &> /dev/null
 
 osascript -e 'tell application "System Preferences" to quit'

@@ -18,10 +18,11 @@ $apps.appstore | each {
     /opt/homebrew/bin/mas install $in
 }
 
-# addresses "VSCodium.app” can’t be opened because Apple cannot check it for malicious software.
+# addresses "VSCodium.app can’t be opened because Apple cannot check it for malicious software" message
 codesign --sign - --force --deep /Applications/VSCodium.app
 xattr -d com.apple.quarantine /Applications/VSCodium.app
 
+# pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
  
