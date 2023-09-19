@@ -1,3 +1,6 @@
+[includeIf "gitdir:~/.dotfiles"]
+    path = .gitconfig_dskwrite
+
 [includeIf "gitdir:~/repos/dskwrite"]
     path = .gitconfig_dskwrite
 
