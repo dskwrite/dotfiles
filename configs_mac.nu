@@ -17,6 +17,7 @@ for $c in ( $configs | transpose ) {
         #   create the directory path if it doesn't already exist
         if ( not $config_sym_link_path_exists ) {
             mkdir ( $config_sym_link_path | path dirname | path expand )
+            ln -s ( $config_file_path | path expand ) ( $config_sym_link_path | path expand )
         }
         
         if ( $config_sym_link_path_exists ) {
@@ -27,13 +28,14 @@ for $c in ( $configs | transpose ) {
             #   backup the file and remove the original
             if ( $config_file_object.type == 'file' ) {
                 cp ( $config_file_path | path expand ) ( $"($config_sym_link_path).backup.($backup_timestamp)" | path expand )
-                rm ( $config_sym_link_path | path expand )
+                rm $config_sym_link_path
+                ln -s ( $config_file_path | path expand ) ( $config_sym_link_path | path expand )
             }
         }
 
-        # create/update symbolic link
-        ln -sf ( $config_file_path | path expand ) ( $config_sym_link_path | path expand )
 
     }
     
 }
+
+

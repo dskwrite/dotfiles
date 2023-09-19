@@ -2,6 +2,9 @@ git:
   .gitconfig_main:  ~/.gitconfig
   .gitconfig_dskwrite: ~/.gitconfig_dskwrite
 
+iterm2:
+  com.googlecode.iterm2.plist: ~/Library/Preferences/com.googlecode.iterm2.plist
+
 nushell:
   env.nu: ~/Library/Application Support/nushell/env.nu
   config.nu: ~/Library/Application Support/nushell/config.nu
@@ -12,3 +15,4 @@ powershell:
 zsh:
   .zprofile: ~/.zprofile
   .zshrc: ~/.zshrc
+
