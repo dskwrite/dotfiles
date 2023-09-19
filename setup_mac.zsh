@@ -16,7 +16,6 @@ else
 	echo "Nushell: Install completed"
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-# add configuration symlinks
-/opt/homebrew/bin/nu ~/.dotfiles/install_apps_mac.nu
+/opt/homebrew/bin/nu ~/.dotfiles/configs_mac.nu
+/opt/homebrew/bin/nu ~/.dotfiles/apps_mac.nu
 /opt/homebrew/bin/nu ~/.dotfiles/settings_mac.nu

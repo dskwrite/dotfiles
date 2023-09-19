@@ -6,13 +6,11 @@ print "Homebrew: Running update ..."
 
 /opt/homebrew/bin/brew tap homebrew/cask-fonts
 
-let $apps = (open ~/.dotfiles/apps.yaml)
+let $apps = (open ~/.dotfiles/apps_mac.yaml)
 
 $apps.homebrew | each { 
     /opt/homebrew/bin/brew install $in
 }
-
-exit
 
 $apps.appstore | each { 
     /opt/homebrew/bin/mas install $in
