@@ -1,5 +1,6 @@
 homebrew:
   - git
+  - git-credential-manager
   - logi-options-plus
   - mas
   - dotnet-sdk
