@@ -1,44 +1,56 @@
 homebrew:
   - git
   - git-credential-manager
-  - logi-options-plus
+  
   - mas
-  - dotnet-sdk
-  - alt-tab
-  - powershell
-  - azure-cli
-  - oh-my-posh
-  - raycast
-  - setapp
-  - 1password
-  - 1password-cli
+
   - iterm2
   - warp
+ # - nu  #already installed via the initial mac setup script
+  - powershell
+  - zoxide
+  - bat
+  - dotnet-sdk
+  - oh-my-posh
   - visual-studio-code
+  - azure-cli
   - vscodium
-  - docker
 #  - insomnia
+  
+  - 1password
+  - 1password-cli
+  - alt-tab
+  - raycast
+  - setapp
   - snagit
   - beyond-compare
-  - figma
-  - notion
-  - obsidian
-  - raindropio
+  - rewind
+  - logi-options-plus
+#  - keycue
+
   - microsoft-edge
   - vivaldi
 #  - orion
 #  - arc
 #  - stack-stack
-  - pocket-casts
+
+  - obsidian
+  - raindropio
+  - figma
+  - notion
+
   - discord
-  - microsoft-teams
   - zoom
+  - microsoft-teams
+
   - elgato-control-center
   - elgato-stream-deck
   - logitune
-  - rewind
-#  - keycue
 
+  - pocket-casts
+
+homebrew_casks:
+  - docker
 
 appstore:
   - 1569813296  #1Password for Safari

@@ -19,4 +19,3 @@ fi
 /opt/homebrew/bin/nu ~/.dotfiles/configs_mac.nu
 /opt/homebrew/bin/nu ~/.dotfiles/apps_mac.nu
 /opt/homebrew/bin/nu ~/.dotfiles/settings_mac.nu
-cp "~/Library/Mobile Documents/com~apple~CloudDocs/fonts/berkeley-mono-variable/TTF/*" ~/Library/Fonts

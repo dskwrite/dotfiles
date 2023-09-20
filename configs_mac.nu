@@ -28,7 +28,7 @@ for $c in ( $configs | transpose ) {
             #   backup the file and remove the original
             if ( $config_file_object.type == 'file' ) {
                 cp ( $config_file_path | path expand ) ( $"($config_sym_link_path).backup.($backup_timestamp)" | path expand )
-                rm $config_sym_link_path
+                rm ( $config_sym_link_path | path expand )
                 ln -s ( $config_file_path | path expand ) ( $config_sym_link_path | path expand )
             }
         }

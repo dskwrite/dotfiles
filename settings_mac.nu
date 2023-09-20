@@ -18,17 +18,11 @@ sudo nvram StartupMute=%01
 defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 # Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 # TODO: review what this does
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 #defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 #defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Trackpad: map bottom right corner to right-click
-# TODO: review what this does
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-#defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-#defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 # TODO: review what this does
@@ -165,6 +159,10 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 
+# Turn off Spotlight keyboard shortcut
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Add :AppleSymbolicHotKeys:64:enabled bool false"
+
+
 ##############
 # TODO
 ##############
@@ -172,7 +170,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Software Updates > Install application updates from the App Store
 
 
-
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 ###############################################################################
 # Kill affected applications
