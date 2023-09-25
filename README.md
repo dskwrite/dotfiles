@@ -117,6 +117,7 @@ Windows 11
 
 # What I Use (Hardware)
 [MacBook Pro 16 inch (2021)](https://support.apple.com/kb/SP858?locale=en_US)
+[Mackbook Pro 13 inch(2020)](https://support.apple.com/kb/SP824?locale=en_US)
 
 
 # Configurations
@@ -125,6 +126,10 @@ Windows 11
 
 # Mac Setup
 
+## Initial Setup
+
+
+## Automated Steps
 ```
 xcode-select --install
 ```
@@ -136,3 +141,84 @@ git clone https://github.com/dskwrite/dotfiles.git ~/.dotfiles
 ```
 zsh ~/.dotfiles/setup_mac.zsh
 ```
+
+## Manual Steps
+
+```nu
+let $machine_name = 'ADD MACHINE NAME HERE, e.g., dsk-mbp-2020-13'
+scutil --set ComputerName $machine_name
+scutil --set HostName $machine_name
+scutil --set LocalHostName $machine_name
+#TODO: review if this is needed ... and if so, what needs to be fixed
+#defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $machine_name
+```
+
+Restart
+
+### System Settings
+- General > Software Update
+	- `Install macOS updates`: on 
+	- `Install application updates from the App Store`: on
+- Profile > iCloud > iCloud Drive
+	- `Sync Desktop & Document Folders`: on
+- Touch ID & Password
+	- Apple Watch
+- Keyboard > Touchbar Settings
+	- `Touchbar shows`: F1, F2, etc. Keys
+- Trackpad
+	- `Tracking speed`: max
+	- `Tap to click`: on
+- Accessibility > Pointer Control > Trackpad Options
+	- `Use trackpad for dragging`: on
+	- `Dragging style`: Three Finger Drag
+
+### 1Password
+- Sign in
+- Settings > Developer
+	- `Integrate with 1Password CLI`
+
+### Safari
+- General
+	- `Safari opens with`: All windows from last session
+	- `Remove history items`: Manually
+	- `Remove download list items`: Manually
+	- `Open "safe" files after downloading`: off
+- Tabs
+	- `Tab layout`: Compact
+- Autofill
+	- Turn off all
+- Search
+	- `Search engine`: Bing
+- Extensions
+	- Enable all extensions
+- Advanced
+	- `Show full website address`: on
+- Configure toolbar
+	- 
+
+
+### Raycast
+- Change main hotkey to `⌘ SPACE`
+- Sign in
+- Turn on `Cloud Sync`
+- Re-apply hotkeys
+
+
+### Visual Studio Code
+- Turn on Settings sync
+
+
+### Obsidian
+- Connect to synced vault
+	- set local directory to ~/.obsidian
+
+### Arc Browser
+	- General
+		- `Archive tabs after`: 30 days
+		- `Search engine`: Bing
+	- Extensions
+		- [1Password](https://chrome.google.com/webstore/detail/omnivore/blkggjdmcfjdbmmmlfcpplkchpeaiiab/related)
+		- [Cubox](https://chrome.google.com/webstore/detail/cubox/bflmgpechpeohjfomgfdkkfcbhfcjohl/related)
+		- [Readwise Highlighter](https://chrome.google.com/webstore/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi)
+		- [Omnivore](https://chrome.google.com/webstore/detail/omnivore/blkggjdmcfjdbmmmlfcpplkchpeaiiab/related)
+		- [Todoist](https://chrome.google.com/webstore/detail/todoist-for-chrome/jldhpllghnbhlbpcmnajkpdmadaolakh/related)

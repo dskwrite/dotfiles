@@ -208,7 +208,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 	'Messages'
 	'Safari'
 	'SystemUIServer'
-	'Terminal'
 ] | each {
 	killall $in
 }
