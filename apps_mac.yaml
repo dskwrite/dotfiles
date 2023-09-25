@@ -4,12 +4,16 @@ homebrew:
   
   - mas
 
+  - mackup
+
   - iterm2
   - warp
  # - nu  #already installed via the initial mac setup script
   - powershell
   - zoxide
   - bat
+  - python
+#  - pyenv
   - dotnet-sdk
   - oh-my-posh
   - visual-studio-code

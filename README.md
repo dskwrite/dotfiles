@@ -20,6 +20,7 @@ Windows 11
 ## Package/App Management
 [Homebrew](https://brew.sh)   
 [mas](https://github.com/mas-cli/mas)  
+[mackup](https://github.com/lra/mackup/tree/master)
 [Setapp](https://setapp.com)  
 [pnpm](https://pnpm.io)  
 [Bun](https://bun.sh)  

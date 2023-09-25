@@ -34,10 +34,6 @@ $apps.remove | each {
 	}
 }
 
-
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/configs/iterm2/"
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-
 let $font_icloud_dir_path = "~/Library/Mobile Documents/com~apple~CloudDocs/fonts/berkeley-mono/TTF/"
 let $font_file_names = (ls -a $font_icloud_dir_path).name | path basename
 
@@ -47,5 +43,8 @@ for $f in ( $font_file_names | where { $in =~ ^\..*\.icloud$ }  ) {
 }
 
 cp ($"($font_icloud_dir_path)/*" | path expand) ~/Library/Fonts
+
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/configs/iterm2/"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 exit
