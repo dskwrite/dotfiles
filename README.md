@@ -1,10 +1,10 @@
 # dotfiles
 
-# What I Use
+# What I Use (Software)
 
 ## OS
 macOS 11  
-iOS / iPadOS
+iOS / iPadOS  
 Windows 11  
 
 
@@ -27,34 +27,33 @@ Windows 11
 
 ## Browsers
 [Safari](https://www.apple.com/safari/)  
-[Arc](https://arc.net)
-## Vivaldi  
+[Arc](https://arc.net)  
 [Microsoft Edge](https://www.microsoft.com/edge)  
-
+<!-- Vivaldi  -->
 
 
 ## File Storage/Management
 [iCloud](https://www.icloud.com)  
-[OneDrive](https://www.microsoft.com/en/microsoft-365/onedrive/online-cloud-storage)
-[CommandX](https://sindresorhus.com/command-x) | Cut and paste files in Finder  
-[Forklift](https://binarynights.com) | \[via Setapp\]  
+[OneDrive](https://www.microsoft.com/en/microsoft-365/onedrive/online-cloud-storage)  \[macOS | iOS | Windows\]  
+[CommandX](https://sindresorhus.com/command-x) \[macOS\]  *Cut and paste files in Finder*  
+[Forklift](https://binarynights.com) \[macOS\] (via Setapp)   
 
 
 ## Utilities
 [1Password](https://1password.com)  
 	- 1Password CLI  
 	- 1Password for Safari  
-[Raycast](https://www.raycast.com) | Launcher, windows management  
-[AltTab](https://alt-tab-macos.netlify.app) | Windows alt-tab on macOS  
-[PopClip](https://www.popclip.app) | \[via Setapp\]  
-[Bartender](https://www.macbartender.com) | \[via Setapp\]  
-[OpenIn](https://loshadki.app/openin4/) | \[via Setapp\]  
+[Raycast](https://www.raycast.com) *Launcher, windows management*  
+[AltTab](https://alt-tab-macos.netlify.app) *Windows `alt`-`tab` on macOS*  
+[PopClip](https://www.popclip.app) (via Setapp)  
+[Bartender](https://www.macbartender.com) (via Setapp)  
+[OpenIn](https://loshadki.app/openin4/) (via Setapp)
 [Snagit](https://www.techsmith.com/screen-capture.html)  
 [Beyond Compare](https://www.scootersoftware.com/home)  
 [Microsoft Remote Desktop](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  
 [Rewind](https://www.rewind.ai)  
 [DaisyDisk](https://daisydiskapp.com)  
-[Magic Window Air](https://www.jetsoncreative.com/airmac) | \[via Setapp\]
+[Magic Window Air](https://www.jetsoncreative.com/airmac) (via Setapp)
 
 
 ## Tasks
@@ -63,7 +62,7 @@ Windows 11
 
 
 ## Email / Calendar
-[Spark](https://sparkmailapp.com)
+[Spark](https://sparkmailapp.com)  
 [Microsoft Outlook](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook)    
 
 
@@ -72,15 +71,15 @@ Windows 11
 [Slack](https://slack.com)  
 [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)  
 [Zoom](https://www.zoom.us)  
-# Mirror Magnet  
+<!-- (Mirror Magnet) -->
 
 
-# Writing
+## Writing
 [Obsidian](https://obsidian.md/)  
 [Notion](https://notion.so)  
 
 
-# Content Consumption
+## Content Consumption
 [Readwise Reader](https://readwise.io/read)  
 	- Save to Reader (Readwise)  
 [Cubox](https://cubox.cc)  
@@ -115,10 +114,10 @@ Windows 11
 [Affinity Photo](https://affinity.serif.com/en-us/photo/)  
 
 
-# Hardware
+# What I Use (Hardware)
 [MacBook Pro 16 inch (2021)](https://support.apple.com/kb/SP858?locale=en_US)
 
 
 # Configurations
 ## Git
-[Github commit email address](#https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
+[GitHub commit email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
