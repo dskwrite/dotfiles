@@ -27,10 +27,10 @@ xattr -d com.apple.quarantine /Applications/VSCodium.app
 # pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-$apps.remove | each {
-	if ( $in | path exists) { 
-		print $"Uninstalling ($in)"
-		trash $in 
+for $app in $apps.remove {
+	if ( $app | path exists) { 
+		print $"Uninstalling ($app)"
+		rm -rf ( $app | path expand )
 	}
 }
 
