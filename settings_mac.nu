@@ -12,7 +12,7 @@ sudo -v
 #defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2021-16"
 
 #Disable the sound effects on boot
-nvram StartupMute=%01
+sudo nvram StartupMute=%01
 
 #Dark Mode
 # this is now configured on the manual installation
