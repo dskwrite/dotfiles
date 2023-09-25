@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-xcode-select --install
-
 if test $(which brew); then
 	echo "Homebrew: Already installed"
 else
