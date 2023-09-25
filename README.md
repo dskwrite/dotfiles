@@ -124,6 +124,11 @@ Windows 11
 [GitHub commit email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
 
 # Mac Setup
+
+```
+xcode-select --install
+```
+
 ```
 git clone https://github.com/dskwrite/dotfiles.git ~/.dotfiles
 ```
