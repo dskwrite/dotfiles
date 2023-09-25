@@ -1,14 +1,18 @@
-#TODO: change this script to run with Nushell
+# Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
 
 #TODO: paramaterize name
 # Set computer name
-#sudo scutil --set ComputerName "dsk-mbp-2021-16"
-#sudo scutil --set HostName "dsk-mbp-2021-16"
-#sudo scutil --set LocalHostName "dsk-mbp-2021-16"
-#sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2021-16"
+#scutil --set ComputerName "dsk-mbp-2021-16"
+#scutil --set HostName "dsk-mbp-2021-16"
+#scutil --set LocalHostName "dsk-mbp-2021-16"
+#defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2021-16"
 
 #Disable the sound effects on boot
-sudo nvram StartupMute=%01
+nvram StartupMute=%01
 
 #Dark Mode
 # this is now configured on the manual installation
@@ -26,7 +30,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 # TODO: review what this does
-#defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 
 ###############################################################################
@@ -70,6 +74,8 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
 
 
 
@@ -155,8 +161,23 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # MESSAGES
 ###############################################################################
 
-# Disable smart quotes as it’s annoying for messages that contain code
+# Disable smart quotes
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+## TO REVIEW
+# Disable automatic capitalization
+#defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes
+#defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic period substitution
+#defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable auto-correct
+#defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+
 
 
 # Turn off Spotlight keyboard shortcut
@@ -193,3 +214,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 }
 
 osascript -e 'tell application "System Preferences" to quit'
+
+
+###############################################################################
+# REFERENCES
+###############################################################################
+# https://github.com/kevinSuttle/macOS-Defaults/blob/master/.macos

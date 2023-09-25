@@ -15,6 +15,7 @@ homebrew:
   - visual-studio-code
   - azure-cli
   - vscodium
+#  - bbedit
 #  - insomnia
   
   - 1password
@@ -28,14 +29,14 @@ homebrew:
   - logi-options-plus
 #  - keycue
 
+  - arc
   - microsoft-edge
-  - vivaldi
+#  - vivaldi
 #  - orion
-#  - arc
 #  - stack-stack
 
   - obsidian
-  - raindropio
+#  - raindropio
   - figma
   - notion
 
@@ -59,6 +60,8 @@ appstore:
 #  - 1518425043  #Boop
   - 6448461551  #Command X  
 #  - 1024640650  #CotEditor
+  - 1113361350  #Cubox
+  - 1550721541  #Cubox for Safari
   - 411643860   #DaisyDisk
 #  - 1502527999  #Jiffy
 #  - 1622835804  #Kagi
@@ -70,9 +73,11 @@ appstore:
 #  - 1274495053  #Microsoft To Do
   - 462054704   #Microsoft Word 
   - 1563698880  #Mirror Magnet
+  - 1327661892  #mymind
+  - 1564031042  #Omnivore
   - 823766827   #OneDrive
 #  - 1477385213  #Save to Pocket
-  - 1549370672  #Save to Raindrop.io
+#  - 1549370672  #Save to Raindrop.io
   - 1640236961  #Save to Reader (Readwise)
 #  - 1522267256  #Shareful
   - 803453959   #Slack
