@@ -20,7 +20,7 @@ Windows 11
 ## Package/App Management
 [Homebrew](https://brew.sh)   
 [mas](https://github.com/mas-cli/mas)  
-[mackup](https://github.com/lra/mackup/tree/master)
+[mackup](https://github.com/lra/mackup/tree/master)  
 [Setapp](https://setapp.com)  
 [pnpm](https://pnpm.io)  
 [Bun](https://bun.sh)  
@@ -194,31 +194,69 @@ Restart
 - Advanced
 	- `Show full website address`: on
 - Configure toolbar
-	- 
 
 
 ### Raycast
 - Change main hotkey to `⌘ SPACE`
 - Sign in
 - Turn on `Cloud Sync`
-- Re-apply hotkeys
+- Extensions
+	- Re-apply hotkeys
+	- Activate menu bar items
+		- Menubar Weather
+		- Todoist
 
+### Logitech Options
+- TODO
 
 ### Visual Studio Code
 - Turn on Settings sync
 
 
 ### Obsidian
-- Connect to synced vault
-	- set local directory to ~/.obsidian
+- `Open vault from Obsidian Sync`
+	- set local directory to `~/.obsidian`
+- Settings > Sync
+	- Turn on all sync toggles
 
 ### Arc Browser
-	- General
-		- `Archive tabs after`: 30 days
-		- `Search engine`: Bing
-	- Extensions
-		- [1Password](https://chrome.google.com/webstore/detail/omnivore/blkggjdmcfjdbmmmlfcpplkchpeaiiab/related)
-		- [Cubox](https://chrome.google.com/webstore/detail/cubox/bflmgpechpeohjfomgfdkkfcbhfcjohl/related)
-		- [Readwise Highlighter](https://chrome.google.com/webstore/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi)
-		- [Omnivore](https://chrome.google.com/webstore/detail/omnivore/blkggjdmcfjdbmmmlfcpplkchpeaiiab/related)
-		- [Todoist](https://chrome.google.com/webstore/detail/todoist-for-chrome/jldhpllghnbhlbpcmnajkpdmadaolakh/related)
+- General
+	- `Archive tabs after`: 30 days
+	- `Search engine`: Bing
+- Advanced
+	- `When opening Arc, restor windows from previous session`: on
+- Extensions
+	- [1Password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa)
+	- [Cubox](https://chrome.google.com/webstore/detail/cubox/bflmgpechpeohjfomgfdkkfcbhfcjohl)
+	- [Readwise Highlighter](https://chrome.google.com/webstore/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi)
+	- [Omnivore](https://chrome.google.com/webstore/detail/omnivore/blkggjdmcfjdbmmmlfcpplkchpeaiiab)
+	- [Todoist](https://chrome.google.com/webstore/detail/todoist-for-chrome/jldhpllghnbhlbpcmnajkpdmadaolakh)
+
+### Microsoft Edge
+- Login with personal Microsoft account
+- Vertical tabs
+- Start, home and new tabs
+	- `When Edge starts`: Open tabs from the previous session
+
+### iTerm
+- General > Preferences
+	- `Save changes`: Automatically
+
+### Bartender
+
+### Mosaic
+- General
+	- `Manage Preferences`: Import `~/.dotfiles/configs/mosaic`
+
+### OpenIn
+- Restore last backup
+
+### SnippetsLab
+- Sync
+	- `iCloud Sync`: Enabled
+
+# Prep for Reset
+
+```
+mackup backup --verbose
+```

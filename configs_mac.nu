@@ -43,3 +43,5 @@ if ( not ( '~/.mackup' | path exists ) ) {
 }
 
 /opt/homebrew/bin/mackup restore --verbose
+
+mkdir ~/repos/dskwrite

@@ -42,7 +42,10 @@ for $f in ( $font_file_names | where { $in =~ ^\..*\.icloud$ }  ) {
 	brctl download ( $"($font_icloud_dir_path)($d)" | path expand )
 }
 
+sleep 20sec
+
 cp ($"($font_icloud_dir_path)/*" | path expand) ~/Library/Fonts
+
 
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/configs/iterm2/"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
