@@ -163,6 +163,8 @@ Restart
 	- `Sync Desktop & Document Folders`: on
 - Touch ID & Password
 	- Apple Watch
+- Keyboard > Keyboard Shortcuts > Function Keys
+	- `Use F1, F2, etc. keys as standard function keys`: on
 - Keyboard > Touchbar Settings
 	- `Touchbar shows`: F1, F2, etc. Keys
 - Trackpad
@@ -215,9 +217,11 @@ Restart
 
 ### Obsidian
 - `Open vault from Obsidian Sync`
-	- set local directory to `~/.obsidian`
+	- set local directory to `~/obsidian`
 - Settings > Sync
 	- Turn on all sync toggles
+- Update Raycast Obsidian extension
+	- update path to vault, e.g., /Users/dsk/obsidian/Me/
 
 ### Arc Browser
 - General
