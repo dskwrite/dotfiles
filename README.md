@@ -3,7 +3,7 @@
 # What I Use (Software)
 
 ## OS
-macOS 11  
+macOS 14  
 iOS / iPadOS  
 Windows 11  
 
@@ -42,14 +42,15 @@ Windows 11
 
 ## Utilities
 [1Password](https://1password.com)  
-	- 1Password CLI  
-	- 1Password for Safari  
-[Raycast](https://www.raycast.com) *Launcher, windows management*  
+- 1Password CLI  
+- 1Password for Safari  
+
+[Raycast](https://www.raycast.com) *Launcher, windows management, and way more ❤️*  
 [AltTab](https://alt-tab-macos.netlify.app) *Windows `alt`-`tab` on macOS*  
 [PopClip](https://www.popclip.app) (via Setapp)  
 [Bartender](https://www.macbartender.com) (via Setapp)  
-[OpenIn](https://loshadki.app/openin4/) (via Setapp)
-[Snagit](https://www.techsmith.com/screen-capture.html)  
+[OpenIn](https://loshadki.app/openin4/) (via Setapp)  
+[Snagit](https://www.techsmith.com/screen-capture.html) ... or [shottr](https://shottr.cc/)?  
 [Beyond Compare](https://www.scootersoftware.com/home)  
 [Microsoft Remote Desktop](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  
 [Rewind](https://www.rewind.ai)  
@@ -58,13 +59,13 @@ Windows 11
 
 
 ## Tasks
-[Reminders](https://support.apple.com/en-us/HT205890)  
+[Reminders](https://support.apple.com/en-us/HT205890) *when I want to be bugged until I complete/update*  
 [Todoist](https://todoist.com)  
 
 
 ## Email / Calendar
-[Spark](https://sparkmailapp.com)  
 [Microsoft Outlook](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook)    
+[Spark](https://sparkmailapp.com)  
 
 
 ## Chat / Video Calls
@@ -116,9 +117,12 @@ Windows 11
 
 
 # What I Use (Hardware)
-[MacBook Pro 16 inch (2021)](https://support.apple.com/kb/SP858?locale=en_US)
-[Mackbook Pro 13 inch(2020)](https://support.apple.com/kb/SP824?locale=en_US)
-
+[MacBook Pro 16 inch (2021)](https://support.apple.com/kb/SP858?locale=en_US)  
+[MacBook Pro 13 inch (2020)](https://support.apple.com/kb/SP824?locale=en_US)  
+iPad Pro  
+iPhone Pro Max 13  
+Logitech MX Master 3  
+LG Monitor
 
 # Configurations
 ## Git
@@ -163,8 +167,14 @@ Restart
 	- `Sync Desktop & Document Folders`: on
 - Touch ID & Password
 	- Apple Watch
+- Keyboard > Keyboard Shortcuts > App Shortcuts
+	- Turn off all shortcuts
+- Keyboard > Keyboard Shortcuts > App Shortcuts
+	- Add entry to remap Character Viewer to `SHIFT ⌥ ⌘ ` (so this won't be used and `^ ⌘ SPACE` can use Raycast's character picker)
 - Keyboard > Keyboard Shortcuts > Function Keys
 	- `Use F1, F2, etc. keys as standard function keys`: on
+- Keyboard > Keyboard Shortcuts > Modifier Keys
+	- `Caps Lock key`: No action
 - Keyboard > Touchbar Settings
 	- `Touchbar shows`: F1, F2, etc. Keys
 - Trackpad

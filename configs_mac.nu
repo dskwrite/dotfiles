@@ -40,8 +40,8 @@ for $c in ( $configs | transpose ) {
 
 if ( not ( '~/.mackup' | path exists ) ) {
 	ln -s -f ( '~/.dotfiles/configs/mackup/custom_config/' | path expand ) ( '~/.mackup' | path expand )
+	/opt/homebrew/bin/mackup restore --verbose
 }
 
-/opt/homebrew/bin/mackup restore --verbose
 
 mkdir ~/repos/dskwrite

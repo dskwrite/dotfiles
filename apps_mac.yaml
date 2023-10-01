@@ -1,59 +1,52 @@
 homebrew:
   - git
   - git-credential-manager
-  
-  - mas
-
-  - mackup
-
-  - iterm2
-  - warp
  # - nu  #already installed via the initial mac setup script
-  - powershell
-  - zoxide
-  - bat
-  - python
-#  - pyenv
   - dotnet-sdk
-  - oh-my-posh
-  - visual-studio-code
-  - azure-cli
-  - vscodium
-#  - bbedit
-#  - insomnia
-  
+  - powershell
+  - python
+
   - 1password
   - 1password-cli
   - alt-tab
-  - raycast
-  - setapp
-  - snagit
-  - beyond-compare
-  - rewind
-  - logi-options-plus
-#  - keycue
-
   - arc
-  - microsoft-edge
-#  - vivaldi
-#  - orion
-#  - stack-stack
-
-  - obsidian
-#  - raindropio
-  - figma
-  - notion
-
-  - readdle-spark
+  - azure-cli
+  - bat
+  - beyond-compare
+  - customshortcuts
   - discord
-  - zoom
-  - microsoft-teams
-
   - elgato-control-center
   - elgato-stream-deck
+  - figma
+  - github
+  - iterm2
+  - karabiner-elements
+  - keycastr
+  - keyclu
+  - logi-options-plus
   - logitune
-
+  - mackup
+  - mas
+  - microsoft-edge
+  - microsoft-teams
+  - notion
+  - obsidian
+  - oh-my-posh
   - pocket-casts
+#  - pyenv
+  - raycast
+  - rewind
+  - setapp
+  - shottr
+#  - snagit
+#  - stack-stack
+  - superkey
+  - warp
+  - visual-studio-code
+  - vscodium
+  - zoxide
+#  - vivaldi
+  - zoom
 
 homebrew_casks:
   - docker
@@ -62,29 +55,25 @@ appstore:
   - 1569813296  #1Password for Safari
   - 824171161   #Affinity Designer
   - 824183456   #Affinity Photo
-#  - 1518425043  #Boop
   - 1287239339  #ColorSlurp
   - 6448461551  #Command X  
-#  - 1024640650  #CotEditor
   - 1113361350  #Cubox
   - 1550721541  #Cubox for Safari
   - 411643860   #DaisyDisk
 #  - 1502527999  #Jiffy
-#  - 1622835804  #Kagi
   - 405399194   #Kindle
   - 462058435   #Microsoft Excel
   - 985367838   #Microsoft Outlook
   - 462062816   #Microsoft PowerPoint
   - 1295203466  #Microsoft Remote Desktop
-#  - 1274495053  #Microsoft To Do
   - 462054704   #Microsoft Word 
   - 1563698880  #Mirror Magnet
-  - 1327661892  #mymind
+  - 1532801185  #mymind
   - 1564031042  #Omnivore
   - 823766827   #OneDrive
-#  - 1477385213  #Save to Pocket
-#  - 1549370672  #Save to Raindrop.io
+  - 1611378436  #Pure Paste
   - 1640236961  #Save to Reader (Readwise)
+  - 1606145041  #Sleeve
 #  - 1522267256  #Shareful
   - 803453959   #Slack
   - 585829637   #Todoist

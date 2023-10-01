@@ -1,3 +1,7 @@
+bash:
+  .bash_profile: ~/.bash_profile
+  .bashrc: ~/.bashrc
+
 git:
   .gitconfig_main:  ~/.gitconfig
   .gitconfig_dskwrite: ~/.gitconfig_dskwrite
