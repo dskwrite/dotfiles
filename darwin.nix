@@ -169,4 +169,8 @@
     };
   };
 
+  system.activationScripts.postActivation.text = ''
+    sudo nvram StartupMute=%01
+  '';
+
 }
