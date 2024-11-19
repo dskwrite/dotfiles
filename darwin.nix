@@ -160,6 +160,11 @@
       AppleKeyboardUIMode = 3;
       AppleShowAllExtensions = true; # Finder: show file extensions 
       AppleShowAllFiles = true; # Finder: show all files
+      NSAutomaticCapitalizationEnabled = false; # disable auto-capitalization
+      NSAutomaticDashSubstitutionEnabled = false; # disable smart dashes
+      NSAutomaticInlinePredictionEnabled = false; # disable inline prediction
+      NSAutomaticPeriodSubstitutionEnabled = false; # disable smart periods
+      NSAutomaticQuoteSubstitutionEnabled = false; # disable smart quotes
       NSAutomaticSpellingCorrectionEnabled = false; # disable auto-correct
     };
   };
