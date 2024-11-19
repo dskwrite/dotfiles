@@ -8,4 +8,6 @@ config.font = wezterm.font('JetBrains Mono', {
 })
 config.font_size = 14.0
 
+config.color_scheme = 'Tender (Gogh)'
+
 return config
