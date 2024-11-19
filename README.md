@@ -75,6 +75,7 @@ My macOS setup and configuration using:
 
 ## App configurations
 
+-   [ ] Setting nushell as default shell
 -   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
 -   [ ] bash configuration
 -   [ ] troubleshoot installing azure-cli with home-manager
