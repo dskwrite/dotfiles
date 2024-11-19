@@ -43,7 +43,6 @@ My macOS setup and configuration using:
 ## Manual System Settings steps
 
 1. Grant Full Disk Access to Visual Studio Code
-1. Turn off Spotlight keyboard shortcut
 
 ## Manual steps for apps
 
@@ -87,9 +86,6 @@ My macOS setup and configuration using:
 
 ## System configurations
 
--   [ ] disable default macOS hotkeys (see https://github.com/franckrasolo/dotfiles.nix/blob/trunk/darwin/macOS/keyboard.nix)
-    -   Spotlight
-    -   screenshots
 -   [ ] Hide Wi-Fi in menu bar
 -   [ ] Hide Spotlight in menu bar
 -   [ ] Hide Siri in menu bar

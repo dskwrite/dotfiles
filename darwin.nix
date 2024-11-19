@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
@@ -146,6 +146,14 @@
         InstallExtensionUpdatesAutomatically = true;
         ShowFullURLInSmartSearchField = true;
       };
+      "com.apple.symbolichotkeys" = {
+        AppleSymbolicHotKeys = {
+          # disable screenshot selection hotkey
+          "30" = { enabled = 0; };
+          # disable Spotlight hotkey
+          "64" = { enabled = 0; };
+        };
+      };
       #https://shottr.cc/kb/friendsclub
       "cc.ffitch.shottr" = {
         fileNameTemplate = "%Y-%m-%d-%H%M%S-%n";
@@ -170,7 +178,11 @@
   };
 
   system.activationScripts.postActivation.text = ''
-    sudo nvram StartupMute=%01
+    sudo nvram StartupMute=%01  # Mute startup chime
+    
+    #activate system settings that have been changed
+    #TODO: look into why this works for some, e.g., disabling Spotlight hotkey, but not for others, e.g., disabling Screenshot hotkey
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   '';
 
 }
