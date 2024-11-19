@@ -160,6 +160,10 @@
         growingToolbar = 1;
         showDockIcon = 2009463689;
 			};
+      # change AltTab hotkey to ⌘ + Tab
+      "com.lwouis.alt-tab-macos" = {
+        holdShortcut = "\\U2318";
+      };
     };
     NSGlobalDomain = {
       "com.apple.keyboard.fnState" = true; #function keys as standard function keys

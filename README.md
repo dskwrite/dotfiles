@@ -58,8 +58,6 @@ My macOS setup and configuration using:
     1. Sync sidebar
     1. Automatically update my Arc
     1. Change search engine to Perplexity
-1. Launch AltTab
-    1. Change hotkey to `⌘` + `TAB`
 
 # Callouts
 
@@ -75,11 +73,10 @@ My macOS setup and configuration using:
 
 ## App configurations
 
--   [ ] Setting nushell as default shell
+-   [ ] Set nushell as default shell
 -   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
--   [ ] bash configuration
 -   [ ] troubleshoot installing azure-cli with home-manager
--   currently installing with homebrew
+    -   currently installing with homebrew
 -   [ ] determine how to manage PowerShell modules
 -   [ ] Uninstall unwanted default apps, e.g., Notes
 -   [ ] Set default apps for file types
