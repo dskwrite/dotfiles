@@ -10,4 +10,6 @@ config.font_size = 14.0
 
 config.color_scheme = 'Tender (Gogh)'
 
+config.window_decorations = "RESIZE"
+
 return config
