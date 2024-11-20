@@ -15,6 +15,7 @@
     git
     git-credential-manager
     lazygit
+    navi
     nushell
     #pnpm
     powershell

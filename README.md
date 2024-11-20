@@ -109,4 +109,6 @@ My macOS setup and configuration using:
 
 ## Evaulate
 
+-   [ ] cli tldr/cheatsheet
+    -   navi?
 -   [ ] [OrbStack](https://orbstack.dev) as Docker Desktop replacement
