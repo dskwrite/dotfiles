@@ -50,37 +50,37 @@
       "azure-cli"
     ];
     casks = [
-      "1password" #https://1password.com
-      "1password-cli" #https://developer.1password.com/docs/cli/
-      "affinity-designer" #https://affinity.serif.com/en-us/designer/
-      "affinity-photo" #https://affinity.serif.com/en-us/photo/
-      "alt-tab" #https://alt-tab-macos.netlify.app
-      "arc" #https://arc.net
-      #"customshortcuts" #https://www.houdah.com/customShortcuts/
-      "discord" #http://discord.com
+      "1password" # https://1password.com
+      "1password-cli" # https://developer.1password.com/docs/cli/
+      "affinity-designer" # https://affinity.serif.com/en-us/designer/
+      "affinity-photo" # https://affinity.serif.com/en-us/photo/
+      "alt-tab" # https://alt-tab-macos.netlify.app
+      "arc" # https://arc.net
+      #"customshortcuts" # https://www.houdah.com/customShortcuts/
+      "discord" # http://discord.com
       #docker
-      "figma"
-      "jordanbaird-ice" #https://icemenubar.app
-      "karabiner-elements"
-      "logi-options+"
-      "microsoft-edge"
-      "microsoft-teams"
-      "miro"
-      "notion"
-      "obsidian"
-      "pocket-casts"
+      "figma" # https://figma.com
+      "jordanbaird-ice" # https://icemenubar.app
+      "karabiner-elements" # https://karabiner-elements.pqrs.org
+      "logi-options+"  # https://www.logitech.com/en-us/software/logi-options-plus.html
+      "microsoft-edge" # https://www.microsoft.com/en-us/edge
+      "microsoft-teams" # https://teams.microsoft.com
+      "miro" # https://miro.com
+      "notion" # https://notion.so
+      "obsidian" # https://obsidian.md
+      "pocket-casts" # https://pocketcasts.com
       #"raindropio
-      "raycast"
-      "reader"
-      "setapp"
-			"shottr"
-      "visual-studio-code"
-      "vscodium"
-      "zoom"
+      "raycast" # https://www.raycast.com
+      "reader" # https://readwise.io/read
+      "setapp" # https://setapp.com
+			"shottr" # https://shottr.cc
+      "visual-studio-code" # https://code.visualstudio.com
+      "vscodium" # https://vscodium.com
+      "zoom" # https://zoom.us
     ];
     masApps = {
       _1PasswordforSafari = 1569813296;
-      CommandX = 6448461551; #https://sindresorhus.com/command-x
+      CommandX = 6448461551; # https://sindresorhus.com/command-x
       #Cubox = 1113361350;
       #CuboxForSafari = 1550721541;
       #DaisyDisk = 411643860;
@@ -95,18 +95,18 @@
       OneDrive = 823766827;
       Perplexity = 6714467650;
       SaveToReaderForSafari = 1640236961;
-      Sleeve = 1606145041;
+      Sleeve = 1606145041; # https://replay.software/sleeve
       Slack = 803453959;
       Todoist = 585829637;
-      UTCTime = 1538245904; #https://sindresorhus.com/utc-time
-      Velja = 1607635845;
-      WindowsApp = 1295203466;
+      UTCTime = 1538245904; # https://sindresorhus.com/utc-time
+      Velja = 1607635845; # https://sindresorhus.com/velja
+      WindowsApp = 1295203466; # https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?tabs=macos-avd
     };
   };
 
   fonts.packages = with pkgs; [
-    jetbrains-mono
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    jetbrains-mono # https://www.jetbrains.com/lp/mono/
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) #https://www.programmingfonts.org/#jetbrainsmono
   ];
 
   # Allows sudo permissions with Touch ID

@@ -51,8 +51,10 @@ My macOS setup and configuration using:
     1. Always show website title in tabs
     1. Set default search engine
 1. Launch 1Password
+    1. Sign in
+    1. Enable 1Password cli
 1. Launch Raycast
-    1. Log in to sync settings
+    1. Sign in to sync settings
 1. Launch Perplexity
     1. map hotkey to superkey + p
 1. Launch Arc
@@ -99,3 +101,7 @@ My macOS setup and configuration using:
 ## Nix
 
 -   [ ] remove hardcoded user
+
+## Evaulate
+
+-   [ ] [OrbStack](https://orbstack.dev) as Docker Desktop replacement
