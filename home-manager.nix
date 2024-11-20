@@ -18,6 +18,7 @@
     nushell
     #pnpm
     powershell
+    python3
     #sqlite
     starship
     tealdeer

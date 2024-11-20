@@ -47,6 +47,8 @@ My macOS setup and configuration using:
 ## Manual steps for apps
 
 1. Launch Safari
+    1. Tab layout: Compact
+    1. Always show website title in tabs
     1. Set default search engine
 1. Launch 1Password
 1. Launch Raycast
@@ -58,6 +60,10 @@ My macOS setup and configuration using:
     1. Sync sidebar
     1. Automatically update my Arc
     1. Change search engine to Perplexity
+1. Launch Velja
+    1. Create rules
+        1. Links from Teams open in Edge
+        2. Links from Notion open in Edge
 
 # Callouts
 
@@ -78,6 +84,8 @@ My macOS setup and configuration using:
 -   [ ] troubleshoot installing azure-cli with home-manager
     -   currently installing with homebrew
 -   [ ] determine how to manage PowerShell modules
+-   [ ] how to manage global python packages, e.g., Harlequin
+    -   currently using `uv install tool`
 -   [ ] Uninstall unwanted default apps, e.g., Notes
 -   [ ] Set default apps for file types
 -   [ ] Self host Atuin sync

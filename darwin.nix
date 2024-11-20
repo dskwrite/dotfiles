@@ -50,14 +50,17 @@
       "azure-cli"
     ];
     casks = [
-      "1password"
-      "1password-cli"
-      "alt-tab"
-      "arc"
-      #"customshortcuts"
-      "discord"
+      "1password" #https://1password.com
+      "1password-cli" #https://developer.1password.com/docs/cli/
+      "affinity-designer" #https://affinity.serif.com/en-us/designer/
+      "affinity-photo" #https://affinity.serif.com/en-us/photo/
+      "alt-tab" #https://alt-tab-macos.netlify.app
+      "arc" #https://arc.net
+      #"customshortcuts" #https://www.houdah.com/customShortcuts/
+      "discord" #http://discord.com
       #docker
-      #figma
+      "figma"
+      "jordanbaird-ice" #https://icemenubar.app
       "karabiner-elements"
       "logi-options+"
       "microsoft-edge"
@@ -65,10 +68,10 @@
       "miro"
       "notion"
       "obsidian"
-      #"pocket-casts"
+      "pocket-casts"
       #"raindropio
       "raycast"
-      #"reader"
+      "reader"
       "setapp"
 			"shottr"
       "visual-studio-code"
@@ -77,14 +80,10 @@
     ];
     masApps = {
       _1PasswordforSafari = 1569813296;
-      #AffinityDesigner = 824171161;
-      #AffinityPhoto = 824183456;
-      #ColorSlurp = 1287239339;
-      CommandX = 6448461551;
+      CommandX = 6448461551; #https://sindresorhus.com/command-x
       #Cubox = 1113361350;
       #CuboxForSafari = 1550721541;
       #DaisyDisk = 411643860;
-      HiddenBar = 1452453066;
       Kindle = 302584613;
       MicrosoftExcel = 462058435;
       MicrosoftOutlook = 985367838;
@@ -95,11 +94,11 @@
       ObsidianWebClipper = 6720708363;
       OneDrive = 823766827;
       Perplexity = 6714467650;
-      #PurePaste = 1611378436;
       SaveToReaderForSafari = 1640236961;
-      #Sleeve = 1606145041;
-      #Slack = 803453959;
+      Sleeve = 1606145041;
+      Slack = 803453959;
       Todoist = 585829637;
+      UTCTime = 1538245904; #https://sindresorhus.com/utc-time
       Velja = 1607635845;
       WindowsApp = 1295203466;
     };

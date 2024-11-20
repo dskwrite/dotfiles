@@ -10,3 +10,4 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 zoxide init nushell | save -f ~/.zoxide.nu
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/dsk/.local/bin') # uv installed tools
