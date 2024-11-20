@@ -89,6 +89,11 @@ My macOS setup and configuration using:
 -   [ ] how to manage global python packages, e.g., Harlequin
     -   currently using `uv install tool`
 -   [ ] Uninstall unwanted default apps, e.g., Notes
+    -   '/Applications/GarageBand.app'
+    -   '/Applications/iMovie.app'
+    -   '/Applications/Keynote.app'
+    -   '/Applications/Numbers.app'
+    -   '/Applications/Pages.app'
 -   [ ] Set default apps for file types
 -   [ ] Self host Atuin sync
 
