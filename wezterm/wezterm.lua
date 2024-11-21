@@ -14,4 +14,7 @@ config.color_scheme = 'Tender (Gogh)'
 
 config.window_decorations = "RESIZE"
 
+-- Disable window close confirmation
+config.window_close_confirmation = 'NeverPrompt'
+
 return config

@@ -64,6 +64,7 @@
       "jordanbaird-ice" # https://icemenubar.app
       "karabiner-elements" # https://karabiner-elements.pqrs.org
       "logi-options+"  # https://www.logitech.com/en-us/software/logi-options-plus.html
+      "microsoft-azure-storage-explorer" # https://azure.microsoft.com/en-us/features/storage-explorer/
       "microsoft-edge" # https://www.microsoft.com/en-us/edge
       "microsoft-teams" # https://teams.microsoft.com
       "miro" # https://miro.com
