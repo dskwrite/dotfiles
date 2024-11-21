@@ -44,8 +44,12 @@ My macOS setup and configuration using:
 
 1. Grant Full Disk Access to Visual Studio Code
 
-## Manual steps for apps
+## Manual steps for apps (until it can be automated)
 
+1. System Settings
+    1. Keyboard
+        1. Press 🌐 key to `Do Nothing`
+        1. Dictation > Shortcut `Press 🎙️`
 1. Launch Safari
     1. Tab layout: Compact
     1. Always show website title in tabs
@@ -62,6 +66,7 @@ My macOS setup and configuration using:
     1. Sync sidebar
     1. Automatically update my Arc
     1. Change search engine to Perplexity
+    1. Archive tabs after `30 days`
 1. Launch Velja
     1. Create rules
         1. Links from Teams open in Edge

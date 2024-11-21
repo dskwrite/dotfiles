@@ -56,6 +56,7 @@
       "affinity-photo" # https://affinity.serif.com/en-us/photo/
       "alt-tab" # https://alt-tab-macos.netlify.app
       "arc" # https://arc.net
+      "betterdisplay" # https://github.com/waydabber/BetterDisplay#readme
       #"customshortcuts" # https://www.houdah.com/customShortcuts/
       "discord" # http://discord.com
       #docker
@@ -81,6 +82,7 @@
     masApps = {
       _1PasswordforSafari = 1569813296;
       CommandX = 6448461551; # https://sindresorhus.com/command-x
+      DayProgress = 6450280202; # https://sindresorhus.com/day-progress 
       #Cubox = 1113361350;
       #CuboxForSafari = 1550721541;
       #DaisyDisk = 411643860;
