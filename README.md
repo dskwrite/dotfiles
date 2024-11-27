@@ -71,6 +71,11 @@ My macOS setup and configuration using:
     1. Create rules
         1. Links from Teams open in Edge
         2. Links from Notion open in Edge
+1. Create Safari PWAs
+    1. Workflowy
+    1. Feedbin
+    1. Bluesky
+1. Enable iPhone mirroring
 
 # Callouts
 
@@ -87,6 +92,7 @@ My macOS setup and configuration using:
 ## App configurations
 
 -   [ ] Set nushell as default shell
+-   [ ] Orion configuration
 -   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
 -   [ ] troubleshoot installing azure-cli with home-manager
     -   currently installing with homebrew

@@ -56,6 +56,7 @@
       "affinity-photo" # https://affinity.serif.com/en-us/photo/
       "alt-tab" # https://alt-tab-macos.netlify.app
       "arc" # https://arc.net
+      "azure-data-studio" # https://docs.microsoft.com/en-us/sql/azure-data-studio/
       "betterdisplay" # https://github.com/waydabber/BetterDisplay#readme
       #"customshortcuts" # https://www.houdah.com/customShortcuts/
       "discord" # http://discord.com
@@ -70,6 +71,7 @@
       "miro" # https://miro.com
       "notion" # https://notion.so
       "obsidian" # https://obsidian.md
+      "orion" # https://kagi.com/orion
       "pocket-casts" # https://pocketcasts.com
       #"raindropio
       "raycast" # https://www.raycast.com
@@ -87,6 +89,7 @@
       #Cubox = 1113361350;
       #CuboxForSafari = 1550721541;
       #DaisyDisk = 411643860;
+      KagiForSafari = 1622835804; # https://kagi.com
       Kindle = 302584613;
       MicrosoftExcel = 462058435;
       MicrosoftOutlook = 985367838;

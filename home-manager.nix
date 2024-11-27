@@ -17,6 +17,7 @@
     lazygit
     navi
     nushell
+    pet
     #pnpm
     powershell
     python3
