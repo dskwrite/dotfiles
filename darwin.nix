@@ -32,9 +32,17 @@
     name = username;
     # Assuming standard macOS home directory path
     home = "/Users/${username}";
-    shell = pkgs.nushell;
+    #shell = pkgs.nushell;
   };
 
+  # --- Home Manager Integration ---
+  home-manager = {
+    useGlobalPkgs = true; # Use packages defined in nixpkgs
+    useUserPackages = true; # Allow Home Manager to manage packages
+    users.${username} = import ./home-manager.nix;
+backupFileExtension = "backup";
+    verbose = true; # Add verbose logging
+  };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -63,7 +71,6 @@
       "betterdisplay" # https://github.com/waydabber/BetterDisplay#readme
       "beyond-compare" # https://scootersoftware.com
       "cursor" # https://www.cursor.com/en
-      #"customshortcuts" # https://www.houdah.com/customShortcuts/
       "discord" # http://discord.com
       "drawio"
       #docker
@@ -76,18 +83,15 @@
       "microsoft-edge" # https://www.microsoft.com/en-us/edge
       "microsoft-teams" # https://teams.microsoft.com
       "miro" # https://miro.com
-      #"morgen" #https://www.morgen.so
       "notion" # https://notion.so
       "obsidian" # https://obsidian.md
       "orion" # https://kagi.com/orion
       "parallels" # https://parallels.com
       "pocket-casts" # https://pocketcasts.com
-      #"raindropio
       "raycast" # https://www.raycast.com
       "reader" # https://readwise.io/read
       "setapp" # https://setapp.com
 			"shottr" # https://shottr.cc
-      #"sunsama" # https://sunsama.com
       "visual-studio-code" # https://code.visualstudio.com
       "vscodium" # https://vscodium.com
       "windsurf" #https://codeium.com/windsurf

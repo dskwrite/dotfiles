@@ -32,12 +32,12 @@
 
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
+    ".config/atuin/config.toml".source = ./atuin/config.toml;
     ".config/ghostty/config".source = ./ghostty/config;
     ".config/nushell/config.nu".source = ./nushell/config.nu;
     ".config/nushell/env.nu".source = ./nushell/env.nu;
     ".config/powershell/Microsoft.PowerShell_profile.ps1".source = ./pwsh/profile.ps1;
     ".config/starship.toml".source = ./starship/starship.toml;
-    ".config/Windsurf/User/settings.json".source = ./windsurf/settings.json;
     "/Library/Application Support/tealdeer/config.toml".source = ./tealdeer/config.toml;
     ".zshrc".source = ./zsh/.zshrc;
     ".bashrc".source = ./bash/.bashrc;

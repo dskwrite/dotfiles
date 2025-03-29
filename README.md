@@ -1,51 +1,72 @@
 # dotfiles
 
-My macOS setup and configuration using:
+This repo contains my macOS setup and configuration using:
 
 -   [Nix](https://nixos.org)
 -   [nix-darwin](https://github.com/LnL7/nix-darwin)
 -   [home-manager](https://github.com/nix-community/home-manager)
+
+# Structure
+
+-   `flake.nix`: Defines inputs (Nixpkgs, nix-darwin, home-manager) and the main `darwinConfigurations` entry point. **Note:** The username (`dsk`) is currently hardcoded here.
+-   `darwin.nix`: Configures system-level settings using `nix-darwin`, including:
+    -   macOS system defaults (Dock, Finder, Trackpad, etc.)
+    -   Homebrew integration (manages formulae, casks, and MAS apps)
+    -   Installed fonts
+    -   Touch ID for sudo
+    -   Integration with Home Manager
+-   `home-manager.nix`: Configures user-level settings using `home-manager`, including:
+    -   Installation of CLI tools and applications via Nix packages (`atuin`, `nushell`, `uv`, etc.)
+    -   Management of dotfiles (linking configurations for `git`, `nushell`, `starship`, etc.)
+-   subdirectories containing app specific config files
 
 # Steps on a new machine
 
 ## First steps
 
 1. Grant Full Disk Access to Terminal.app
+    - System Preferences > Security & Privacy > Privacy > Full Disk Access > add /Applications/Utilities/Terminal.app
     - this is needed for some nix flake rebuild steps
+
 1. Call `setup_mac.sh` gist
-    ```zsh
-    zsh <(curl -sL https://gist.githubusercontent.com/dskwrite/54c44145968b0fdf2501838e3a912ebf/raw/96e0e71b75e7c6e6f8153cbf74e78c484a8bf2c0/setup_mac.sh) "<replace-with-machine-name>"
+    ```bash
+    bash <(curl -sL https://gist.githubusercontent.com/dskwrite/54c44145968b0fdf2501838e3a912ebf/raw/96e0e71b75e7c6e6f8153cbf74e78c484a8bf2c0/setup_mac.sh) "<replace-with-machine-name>"
     ```
     - renames machine
     - installs Homebrew (since nix-darwin doesn't support installing Homebrew)
 
 ## Nix
 
-1. install Nix (using Determinate Systems installer)
+1. Install Nix (using Determinate Systems installer)
     ```
     curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
     ```
     - Provides a better installation experience compared to the official Nix installer. See [Zero to Nix](https://zero-to-nix.com/concepts/nix-installer)
+
 1. Clone this repo with nix shell, as Git isn't installed yet
 
+    ```bash
+    # Ensure Nix is available in your shell first (e.g., close and reopen terminal after install)
+    nix shell nixpkgs#git --command git clone <your-repo-url> ~/dotfiles
+    cd ~/dotfiles
     ```
 
-    ```
+    - Installs `git` using Nix, so that you can clone the rest of your dotfiles
 
-1. Build ...
+1. Build and apply the configuration:
 
+    ```bash
+    # Apply the configuration (builds and activates)
+    darwin-rebuild switch --flake .#default
     ```
-
-    ```
+    - This command installs all configured packages (Nix, Homebrew, Casks, MAS apps) and applies system/user settings.
 
 1. Restart machine, as certain changes require it
 
 ## Manual System Settings steps
 
 1. Grant Full Disk Access to Visual Studio Code
-
-## Manual steps for apps (until it can be automated)
-
+    - System Preferences > Security & Privacy > Privacy > Full Disk Access > add /Applications/Visual\ Studio\ Code.app
 1. System Settings
     1. Keyboard
         1. Press 🌐 key to `Do Nothing`
@@ -95,6 +116,7 @@ My macOS setup and configuration using:
 ## App configurations
 
 -   [ ] Set nushell as default shell
+    - I need to resolve issues with starting a Ghostty session not finding the nushell configs
 -   [ ] Orion configuration
 -   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
 -   [ ] troubleshoot installing azure-cli with home-manager
@@ -116,10 +138,6 @@ My macOS setup and configuration using:
 -   [ ] Hide Wi-Fi in menu bar
 -   [ ] Hide Spotlight in menu bar
 -   [ ] Hide Siri in menu bar
-
-## Nix
-
--   [ ] remove hardcoded user
 
 ## Evaulate
 

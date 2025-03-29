@@ -1,6 +1,3 @@
-# Use the explicit path to the system's default shell binary managed by Nix
-# AND explicitly point to the config file linked by Home Manager
-command = /run/current-system/sw/bin/nu --config ~/.config/nushell/config.nu
 theme = GruvboxDarkHard
 #adjust-cell-height = 5%
 #cursor-style = block

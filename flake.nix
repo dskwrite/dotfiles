@@ -23,12 +23,6 @@
         modules = [
           ./darwin.nix
           home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            # Use the username variable here and pass config/pkgs/username to the import
-            home-manager.users.${username} = { config, pkgs, ... }: import ./home-manager.nix { inherit pkgs config username; };
-          }
         ];
       };
 
