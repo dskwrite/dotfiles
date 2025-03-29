@@ -1,0 +1,38 @@
+{
+    "terminal.integrated.profiles.osx": {
+        "nu": {
+            "path": "/run/current-system/sw/bin/nu",
+            // Explicitly point to the config linked by Home Manager
+            "args": ["--config", "/Users/dsk/.config/nushell/config.nu"]
+        },
+        "pwsh": {
+             // Path to PowerShell installed by Home Manager
+            "path": "/Users/dsk/.nix-profile/bin/pwsh",
+             // PowerShell usually loads the profile automatically, no special args needed here typically
+             // Add "-nologo" if you want to suppress the startup banner
+             "args": ["-nologo"]
+        },
+        "bash": {
+            // Standard macOS Bash path
+            "path": "/bin/bash",
+            // Tell Bash to act as a login shell to source profiles (~/.bashrc via ~/.bash_profile)
+            "args": ["-l"]
+        },
+        "zsh": {
+            // Standard macOS Zsh path
+            "path": "/bin/zsh",
+            // Tell Zsh to act as a login shell to source ~/.zshrc
+            "args": ["-l"]
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "nu",
+
+    "windsurf.chatFontSize": "default",
+    "windsurf.rememberLastModelSelection": false,
+    "windsurf.openRecentConversation": false,
+    "windsurf.explainAndFixInCurrentConversation": false,
+    "windsurf.autocompleteSpeed": "default",
+    "windsurf.enableTabToJump": false,
+    "workbench.colorTheme": "Solarized Dark",
+    "windsurf.autoExecutionPolicy": "off"
+}
