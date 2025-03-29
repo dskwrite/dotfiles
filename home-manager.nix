@@ -1,9 +1,10 @@
-{ pkgs, ... }: {
+{ config, pkgs, username, ... }: {
 
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
     atuin
     bat
+    bicep
     #bun
     carapace
     cheat
@@ -26,48 +27,24 @@
     tealdeer
     tmpmail
     uv
-    wezterm
     zoxide
   ];
 
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
+    ".config/ghostty/config".source = ./ghostty/config;
     ".config/nushell/config.nu".source = ./nushell/config.nu;
     ".config/nushell/env.nu".source = ./nushell/env.nu;
     ".config/powershell/Microsoft.PowerShell_profile.ps1".source = ./pwsh/profile.ps1;
     ".config/starship.toml".source = ./starship/starship.toml;
-    ".config/wezterm/wezterm.lua".source = ./wezterm/wezterm.lua;
+    ".config/Windsurf/User/settings.json".source = ./windsurf/settings.json;
     "/Library/Application Support/tealdeer/config.toml".source = ./tealdeer/config.toml;
+    ".zshrc".source = ./zsh/.zshrc;
+    ".bashrc".source = ./bash/.bashrc;
   };
 
   programs = {
     home-manager.enable = true;
-
-    atuin = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    carapace = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-      initExtra = ''
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-        eval "$(starship init zsh)"
-        eval "$(zoxide init --cmd cd zsh)"
-      '';
-    };
-
   };
 
 

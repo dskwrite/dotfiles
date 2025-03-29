@@ -1,7 +1,7 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, username, ... }: {
 
   # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  #services.nix-daemon.enable = true;
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
@@ -23,13 +23,16 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.variables = {
-    XDG_CONFIG_HOME = "$HOME/.config";
+    # Use the standard home directory structure for macOS
+    XDG_CONFIG_HOME = "/Users/${username}/.config";
   };
 
-  #TODO: remove user hardcoding
-  users.users.dsk = {
-    name = "dsk";
-    home = "/Users/dsk"; 
+  # Use the username variable passed from the flake
+  users.users.${username} = {
+    name = username;
+    # Assuming standard macOS home directory path
+    home = "/Users/${username}";
+    shell = pkgs.nushell;
   };
 
 
@@ -58,10 +61,14 @@
       "arc" # https://arc.net
       "azure-data-studio" # https://docs.microsoft.com/en-us/sql/azure-data-studio/
       "betterdisplay" # https://github.com/waydabber/BetterDisplay#readme
+      "beyond-compare" # https://scootersoftware.com
+      "cursor" # https://www.cursor.com/en
       #"customshortcuts" # https://www.houdah.com/customShortcuts/
       "discord" # http://discord.com
+      "drawio"
       #docker
       "figma" # https://figma.com
+      "ghostty" # https://ghostty.org
       "jordanbaird-ice" # https://icemenubar.app
       "karabiner-elements" # https://karabiner-elements.pqrs.org
       "logi-options+"  # https://www.logitech.com/en-us/software/logi-options-plus.html
@@ -69,25 +76,27 @@
       "microsoft-edge" # https://www.microsoft.com/en-us/edge
       "microsoft-teams" # https://teams.microsoft.com
       "miro" # https://miro.com
+      #"morgen" #https://www.morgen.so
       "notion" # https://notion.so
       "obsidian" # https://obsidian.md
       "orion" # https://kagi.com/orion
+      "parallels" # https://parallels.com
       "pocket-casts" # https://pocketcasts.com
       #"raindropio
       "raycast" # https://www.raycast.com
       "reader" # https://readwise.io/read
       "setapp" # https://setapp.com
 			"shottr" # https://shottr.cc
+      #"sunsama" # https://sunsama.com
       "visual-studio-code" # https://code.visualstudio.com
       "vscodium" # https://vscodium.com
+      "windsurf" #https://codeium.com/windsurf
       "zoom" # https://zoom.us
     ];
     masApps = {
       _1PasswordforSafari = 1569813296;
       CommandX = 6448461551; # https://sindresorhus.com/command-x
       DayProgress = 6450280202; # https://sindresorhus.com/day-progress 
-      #Cubox = 1113361350;
-      #CuboxForSafari = 1550721541;
       #DaisyDisk = 411643860;
       KagiForSafari = 1622835804; # https://kagi.com
       Kindle = 302584613;
@@ -100,10 +109,15 @@
       ObsidianWebClipper = 6720708363;
       OneDrive = 823766827;
       Perplexity = 6714467650;
-      SaveToReaderForSafari = 1640236961;
+      rcmd = 1596283165;
+      SaveToReaderForSafari = 1640236961; # https://www.finnvoorhees.com/supercopy
       Sleeve = 1606145041; # https://replay.software/sleeve
       Slack = 803453959;
-      Todoist = 585829637;
+      Shortery = 1594183810;
+      NiceCopy = 6737711441; #https://github.com/marlonjames71/NiceCopy
+        # or 
+      #SuperCopyForSafari = 6477720316; #https://www.finnvoorhees.com/supercopy
+      Todoist = 585829637; # https://www.numberfive.co/detail_shortery.html
       UTCTime = 1538245904; # https://sindresorhus.com/utc-time
       Velja = 1607635845; # https://sindresorhus.com/velja
       WindowsApp = 1295203466; # https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?tabs=macos-avd
@@ -112,11 +126,11 @@
 
   fonts.packages = with pkgs; [
     jetbrains-mono # https://www.jetbrains.com/lp/mono/
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) #https://www.programmingfonts.org/#jetbrainsmono
+    pkgs.nerd-fonts.jetbrains-mono # https://www.programmingfonts.org/#jetbrainsmono
   ];
 
   # Allows sudo permissions with Touch ID
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   system.defaults = {
     controlcenter = {
@@ -141,16 +155,16 @@
     };
     trackpad.Clicking = true;
     CustomUserPreferences = {
-      "com.apple.Safari" = {
-        AlwaysRestoreSessionAtLaunch = true;
-        AutoFillCreditCardData = false;
-        AutoFillFromAddressBook = false;
-        AutoFillMiscellaneousForms = false;
-        AutoFillPasswords = false;
-        FindOnPageMatchesWordStartsOnly = false;
-        InstallExtensionUpdatesAutomatically = true;
-        ShowFullURLInSmartSearchField = true;
-      };
+      #"com.apple.Safari" = {
+      #  AlwaysRestoreSessionAtLaunch = true;
+      #  AutoFillCreditCardData = false;
+      #  AutoFillFromAddressBook = false;
+      #  AutoFillMiscellaneousForms = false;
+      #  AutoFillPasswords = false;
+      #  FindOnPageMatchesWordStartsOnly = false;
+      #  InstallExtensionUpdatesAutomatically = true;
+      #  ShowFullURLInSmartSearchField = true;
+      #};
       "com.apple.symbolichotkeys" = {
         AppleSymbolicHotKeys = {
           # disable screenshot selection hotkey

@@ -50,6 +50,11 @@ My macOS setup and configuration using:
     1. Keyboard
         1. Press 🌐 key to `Do Nothing`
         1. Dictation > Shortcut `Press 🎙️`
+    1. Control Center
+        1. Clock Options
+            1. Announce the time - On
+            1. Interval - On the half hour
+1. Enable iPhone mirroring
 1. Launch Safari
     1. Tab layout: Compact
     1. Always show website title in tabs
@@ -72,10 +77,8 @@ My macOS setup and configuration using:
         1. Links from Teams open in Edge
         2. Links from Notion open in Edge
 1. Create Safari PWAs
-    1. Workflowy
     1. Feedbin
     1. Bluesky
-1. Enable iPhone mirroring
 
 # Callouts
 
