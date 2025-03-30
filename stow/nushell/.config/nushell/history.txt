@@ -1,0 +1,14 @@
+man stow
+darwin-rebuild switch --flake ~/dotfiles/.#default
+ls ~/.config/nushell
+ls ~ -a
+which tealdear
+tealdear
+which tldr
+tldr stow
+tldr --update
+tldr stow
+touch stow/.stowrc
+windsurf stow/.stowrc
+git add stow/.stowrc<\n>git commit -m "Add .stowrc to ignore macOS metadata files"
+darwin-rebuild switch --flake ~/dotfiles/.#default

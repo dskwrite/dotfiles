@@ -32,42 +32,40 @@
     uv
     zoxide
   ];
-  
-  # `home.file` is used to create files in the user's home directory,
-  # by pointing to files in the Nix store.
-  # This is necessary because Nix won't actually create the files,
-  # it just creates a symlink to the file in the store.
 
-  # Why do I use `home.file` instead of `programs.$pkg.configuration`?
-  # 1. Nix configurations may not be up to date or comprehensive.
-  # 2. Better editor support for configuration files with native syntax.
-  # 3. Easier to find examples of native configuration files/syntax.
 
-  home.file = {
-    
-    # shells
-    ".bashrc".source = ./bash/.bashrc;
-    ".config/nushell/config.nu".source = ./nushell/config.nu;
-    ".config/nushell/env.nu".source = ./nushell/env.nu;
-    ".config/powershell/Microsoft.PowerShell_profile.ps1".source = ./pwsh/profile.ps1;
-    ".zshrc".source = ./zsh/.zshrc;
+  # Why do I use stow instead of `programs.$pkg.configuration`?
+  # - The apps themselves need to make changes to the configuration files
+  # - Easier to iterate on changes by seeing them made directly without rebuilding the flake
+  # - Nix configurations may not be up to date or comprehensive.
+  # - Better editor support for configuration files with native syntax.
+  # - Easier to find examples of native configuration files/syntax.
 
-    # git
-    ".gitconfig".source = ./git/.gitconfig;
+  home.activation.stowDots = ''
+    # Construct paths relative to the home directory
+    TARGET_DIR="${config.home.homeDirectory}" # home directory, e.g., /Users/dsk
+    STOW_DIR="$TARGET_DIR/dotfiles/stow" # stow directory, e.g., /Users/dsk/dotfiles/stow
 
-    # CLI tools
-    ".config/atuin/config.toml".source = ./atuin/config.toml;
-    ".config/starship.toml".source = ./starship/starship.toml;
-    "/Library/Application Support/tealdeer/config.toml".source = ./tealdeer/config.toml;
+    # Ensure stow package is available
+    STOW_BIN="${pkgs.stow}/bin/stow" 
 
-    # ghostty
-    ".config/ghostty/config".source = ./ghostty/config;
-
-  };
-
-  programs = {
-    home-manager.enable = true;
-  };
-
+    if [ -d "$STOW_DIR" ]; then
+      echo "Running stow for packages in $STOW_DIR targeting $TARGET_DIR..."
+      # Use -R (restow) to handle updates gracefully. 
+      # -d specifies the directory containing the stow packages
+      # -t specifies the target directory
+      # The final arguments are the packages to stow (we use find to get all dirs)
+      PACKAGES=$(find "$STOW_DIR" -maxdepth 1 -mindepth 1 -type d -exec basename {} \;)
+      if [ -n "$PACKAGES" ]; then
+        echo "Stowing packages: $PACKAGES"
+        $STOW_BIN -d "$STOW_DIR" -t "$TARGET_DIR" -R $PACKAGES
+      else
+        echo "No packages found in $STOW_DIR to stow."
+      fi
+      echo "Stow complete."
+    else
+      echo "Stow directory $STOW_DIR not found, skipping stow."
+    fi
+  '';
 
 }
