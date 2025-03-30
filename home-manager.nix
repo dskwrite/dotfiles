@@ -1,6 +1,7 @@
 { config, pkgs, username, ... }: {
 
   home.stateVersion = "24.05";
+
   home.packages = with pkgs; [
     atuin
     bat
@@ -8,7 +9,7 @@
     #bun
     carapace
     cheat
-    chezmoi
+    #chezmoi
     #deno
     duckdb
     fastfetch
@@ -25,6 +26,7 @@
     python3
     #sqlite
     starship
+    stow
     tealdeer
     tmpmail
     uv
@@ -40,7 +42,7 @@
   # 1. Nix configurations may not be up to date or comprehensive.
   # 2. Better editor support for configuration files with native syntax.
   # 3. Easier to find examples of native configuration files/syntax.
-  
+
   home.file = {
     
     # shells
@@ -65,27 +67,6 @@
 
   programs = {
     home-manager.enable = true;
-
-    chezmoi = {
-        enable = true;
-        settings = {
-          # Tell chezmoi that the source files are in the 'home' subdirectory
-          # within your main dotfiles repository. Adjust if you choose a different name.
-          sourceDir = "${config.home.homeDirectory}/dotfiles/home";
-
-          # Optional: Configure diff and edit tools
-          #diff = {
-          #  command = "git";
-          #  args = ["diff", "--no-index", "--"];
-          #};
-          #edit = {
-          #   command = "code"; # Or vim, nano, etc.
-          #};
-          # Optional: Automatically commit after successful `chezmoi apply`
-          # autoCommit = true;
-        };
-    };
-
   };
 
 
