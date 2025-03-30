@@ -1,25 +1,22 @@
-{ pkgs, lib, username, ... }: {
+# This file is the entry point for the NixOS configuration on macOS.
+# See https://nixos.org/manual/nixos/unstable/index.html#sec-darwin-configuration
 
-  # Auto upgrade nix package and the daemon service.
-  #services.nix-daemon.enable = true;
+{ pkgs, lib, username, ... }: {
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
-  # Enable alternative shell support in nix-darwin.
-  # programs.fish.enable = true;
-
-  # Set Git commit hash for darwin-version.
-  # system.configurationRevision = self.rev or self.dirtyRev or null;
-
   # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
   system.stateVersion = 5;
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   # Allow unfree packages
+  # "Unfree" here refers to packages that do not meet the Debian free software guidelines.
+  # Nixpkgs contains a set of packages that are marked as "unfree" which are typically
+  # proprietary or otherwise restricted. This flag allows installation of packages from
+  # the "unfree" set.
   nixpkgs.config.allowUnfree = true;
 
   environment.variables = {
@@ -32,23 +29,24 @@
     name = username;
     # Assuming standard macOS home directory path
     home = "/Users/${username}";
-    #shell = pkgs.nushell;
   };
 
-  # --- Home Manager Integration ---
+  # Home Manager configuration
   home-manager = {
     useGlobalPkgs = true; # Use packages defined in nixpkgs
     useUserPackages = true; # Allow Home Manager to manage packages
-    users.${username} = import ./home-manager.nix;
-backupFileExtension = "backup";
+    users.${username} = import ./home-manager.nix; # Import user configuration
+    backupFileExtension = "backup"; # Backup files with .backup extension
     verbose = true; # Add verbose logging
   };
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-  ];
 
+  # Homebrew configuration
+  # Homebrew is still needed as some applications are not available in the Nix repository.
+  # This is typically due to the following reasons:
+  # 1. The application is not free software
+  # 2. The application is not available on GitHub
+  # 3. The Nix expression has not been created for the application yet
   environment.variables.HOMEBREW_NO_ANALYTICS = "1";
   homebrew = {
     enable = true;
