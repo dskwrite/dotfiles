@@ -1,0 +1,4 @@
+# Ignore common macOS metadata files
+--ignore='\.DS_Store'
+--ignore='\.localized'
+--ignore='\.AppleDouble'
