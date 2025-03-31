@@ -15,10 +15,7 @@ This repo contains my macOS setup and configuration using:
     -   Installed fonts
     -   Touch ID for sudo
     -   Integration with Home Manager
--   `home-manager.nix`: Configures user-level settings using `home-manager`, including:
-    -   Installation of CLI tools and applications via Nix packages (`atuin`, `nushell`, `uv`, etc.)
-    -   Management of dotfiles (linking configurations for `git`, `nushell`, `starship`, etc.)
--   subdirectories containing app specific config files
+-   `chezmoi/` directory: Dotfiles managed by `chezmoi`.
 
 # Steps on a new machine
 
@@ -119,8 +116,6 @@ This repo contains my macOS setup and configuration using:
     - I need to resolve issues with starting a Ghostty session not finding the nushell configs
 -   [ ] Orion configuration
 -   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
--   [ ] troubleshoot installing azure-cli with home-manager
-    -   currently installing with homebrew
 -   [ ] determine how to manage PowerShell modules
 -   [ ] how to manage global python packages, e.g., Harlequin
     -   currently using `uv install tool`
