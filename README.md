@@ -22,6 +22,7 @@ This repo contains my macOS setup and configuration using:
 ## First steps
 
 1. Grant Full Disk Access to Terminal.app
+
     - System Preferences > Security & Privacy > Privacy > Full Disk Access > add /Applications/Utilities/Terminal.app
     - this is needed for some nix flake rebuild steps
 
@@ -35,9 +36,11 @@ This repo contains my macOS setup and configuration using:
 ## Nix
 
 1. Install Nix (using Determinate Systems installer)
+
     ```
     curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
     ```
+
     - Provides a better installation experience compared to the official Nix installer. See [Zero to Nix](https://zero-to-nix.com/concepts/nix-installer)
 
 1. Clone this repo with nix shell, as Git isn't installed yet
@@ -56,6 +59,7 @@ This repo contains my macOS setup and configuration using:
     # Apply the configuration (builds and activates)
     darwin-rebuild switch --flake .#default
     ```
+
     - This command installs all configured packages (Nix, Homebrew, Casks, MAS apps) and applies system/user settings.
 
 1. Restart machine, as certain changes require it
@@ -113,9 +117,8 @@ This repo contains my macOS setup and configuration using:
 ## App configurations
 
 -   [ ] Set nushell as default shell
-    - I need to resolve issues with starting a Ghostty session not finding the nushell configs
+    -   I need to resolve issues with starting a Ghostty session not finding the nushell configs
 -   [ ] Orion configuration
--   [ ] [Karabiner-Elements](https://karabiner-elements.pqrs.org) configuration
 -   [ ] determine how to manage PowerShell modules
 -   [ ] how to manage global python packages, e.g., Harlequin
     -   currently using `uv install tool`
