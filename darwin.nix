@@ -22,6 +22,7 @@
   environment.variables = {
     # Use the standard home directory structure for macOS
     XDG_CONFIG_HOME = "/Users/${username}/.config";
+    TEALDEER_CONFIG_DIR = "/Users/${username}/.config/tealdeer"; # https://tealdeer-rs.github.io/tealdeer/config.html
   };
 
   # Use the username variable passed from the flake
