@@ -59,63 +59,63 @@
     brews = [
       "atuin" 
       "azure-cli"
-      "bat" # https://github.com/sharkdp/bat
+      "bat"                       # https://github.com/sharkdp/bat
       "carapace"
-      "cheat"
-      "chezmoi"
-      "fastfetch"
+      "chezmoi"                   # https://www.chezmoi.io
+      "fastfetch"                 # https://github.com/fastfetch-cli/fastfetch
       "fzf"
       "gh"
       "git"
       "lazygit"
       "navi"
       "nushell"
-      "knqyf263/pet/pet"
+      "knqyf263/pet/pet"          # https://github.com/knqyf263/pet
       "python"
       "starship"
-      "tealdeer"
+      "tealdeer"                  # https://tealdeer-rs.github.io/tealdeer/
       "tmpmail"
       "uv"
+      "yazi"
       "zoxide"
     ];
     casks = [
-      "1password" # https://1password.com
-      "1password-cli" # https://developer.1password.com/docs/cli/
-      "affinity-designer" # https://affinity.serif.com/en-us/designer/
-      "affinity-photo" # https://affinity.serif.com/en-us/photo/
-      "alt-tab" # https://alt-tab-macos.netlify.app
-      "arc" # https://arc.net
-      "azure-data-studio" # https://docs.microsoft.com/en-us/sql/azure-data-studio/
-      "betterdisplay" # https://github.com/waydabber/BetterDisplay#readme
-      "beyond-compare" # https://scootersoftware.com
-      "cursor" # https://www.cursor.com/en
-      "discord" # http://discord.com
+      "1password"                # https://1password.com
+      "1password-cli"            # https://developer.1password.com/docs/cli/
+      "affinity-designer"        # https://affinity.serif.com/en-us/designer/
+      "affinity-photo"           # https://affinity.serif.com/en-us/photo/
+      "alt-tab"                  # https://alt-tab-macos.netlify.app
+      "arc"                      # https://arc.net
+      "azure-data-studio"        # https://docs.microsoft.com/en-us/sql/azure-data-studio/
+      "betterdisplay"            # https://github.com/waydabber/BetterDisplay#readme
+      "beyond-compare"           # https://scootersoftware.com
+      "cursor"                   # https://www.cursor.com/en
+      "discord"                  # http://discord.com
       "drawio"
       #docker
-      "figma" # https://figma.com
-      "ghostty" # https://ghostty.org
+      "figma"                    # https://figma.com
+      "ghostty"                  # https://ghostty.org
       "git-credential-manager"
-      "jordanbaird-ice" # https://icemenubar.app
-      "karabiner-elements" # https://karabiner-elements.pqrs.org
-      "logi-options+"  # https://www.logitech.com/en-us/software/logi-options-plus.html
+      "jordanbaird-ice"          # https://icemenubar.app
+      "karabiner-elements"       # https://karabiner-elements.pqrs.org
+      "logi-options+"            # https://www.logitech.com/en-us/software/logi-options-plus.html
       "microsoft-azure-storage-explorer" # https://azure.microsoft.com/en-us/features/storage-explorer/
-      "microsoft-edge" # https://www.microsoft.com/en-us/edge
-      "microsoft-teams" # https://teams.microsoft.com
-      "miro" # https://miro.com
-      "notion" # https://notion.so
-      "obsidian" # https://obsidian.md
-      "orion" # https://kagi.com/orion
-      "parallels" # https://parallels.com
-      "pocket-casts" # https://pocketcasts.com
+      "microsoft-edge"           # https://www.microsoft.com/en-us/edge
+      "microsoft-teams"          # https://teams.microsoft.com
+      "miro"                     # https://miro.com
+      "notion"                   # https://notion.so
+      "obsidian"                 # https://obsidian.md
+      "orion"                    # https://kagi.com/orion
+      "parallels"                # https://parallels.com
+      "pocket-casts"             # https://pocketcasts.com
       "powershell"
-      "raycast" # https://www.raycast.com
-      "reader" # https://readwise.io/read
-      "setapp" # https://setapp.com
-			"shottr" # https://shottr.cc
-      "visual-studio-code" # https://code.visualstudio.com
-      "vscodium" # https://vscodium.com
-      "windsurf" #https://codeium.com/windsurf
-      "zoom" # https://zoom.us
+      "raycast"                  # https://www.raycast.com
+      "reader"                   # https://readwise.io/read
+      "setapp"                   # https://setapp.com
+      "shottr"                   # https://shottr.cc
+      "visual-studio-code"       # https://code.visualstudio.com
+      "vscodium"                 # https://vscodium.com
+      "windsurf"                 # https://codeium.com/windsurf
+      "zoom"                     # https://zoom.us
     ];
     masApps = {
       _1PasswordforSafari = 1569813296;
