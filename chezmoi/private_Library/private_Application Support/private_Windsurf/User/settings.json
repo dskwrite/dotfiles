@@ -10,6 +10,7 @@
     "explorer.compactFolders": false,
     "explorer.sortOrder": "filesFirst",
 
+    "git.confirmSync": false,
     "git.enableSmartCommit": true,
 
     "terminal.integrated.fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
@@ -28,11 +29,12 @@
     /* WINDSURF SETTINGS */ 
     /*******************************************************/
     "window.newWindowProfile": "Default",
-    
+
     "windsurf.chatFontSize": "default",
     "windsurf.enableTabToJump": true,
     "windsurf.explainAndFixInCurrentConversation": true,
     "windsurf.openRecentConversation": true,
     "windsurf.rememberLastModelSelection": true,
+    "workbench.colorTheme": "Solarized Dark",
 
 }
