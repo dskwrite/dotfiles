@@ -1,33 +1,14 @@
 # Add Homebrew to PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Initialize Starship
 eval "$(starship init zsh)"
-
-# Initialize Zoxide
-eval "$(zoxide init zsh)" # Or use --cmd cd if preferred
-
-# Initialize Atuin
+source <(fzf --zsh)
+eval "$(zoxide init zsh --cmd cd)"
 eval "$(atuin init zsh)"
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
 
-# Initialize Carapace (check Carapace docs for latest Zsh snippet)
-# Example: source <(carapace _carapace zsh)
-
-# Your other Zsh settings...
-# Added by Windsurf
-export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
-
-# Added by Windsurf
-export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
-
-# Added by Windsurf
-export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
-
-# Added by Windsurf
-export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
-
-# Added by Windsurf
-export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
 
 # Added by Windsurf
 export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
