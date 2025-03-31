@@ -62,8 +62,10 @@
       "bat"                       # https://github.com/sharkdp/bat
       "carapace"
       "chezmoi"                   # https://www.chezmoi.io
+      "eza"                       # https://eza.rocks
       "fastfetch"                 # https://github.com/fastfetch-cli/fastfetch
-      "fzf"
+      "fd"                        # https://github.com/sharkdp/fd   
+      "fzf"                       # https://junegunn.github.io/fzf/
       "gh"
       "git"
       "lazygit"

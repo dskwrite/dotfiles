@@ -118,6 +118,7 @@ This repo contains my macOS setup and configuration using:
 
 -   [ ] Set nushell as default shell
     -   I need to resolve issues with starting a Ghostty session not finding the nushell configs
+-   [ ] nushell fzf https://github.com/junegunn/fzf/issues/4122
 -   [ ] Orion configuration
 -   [ ] determine how to manage PowerShell modules
 -   [ ] how to manage global python packages, e.g., Harlequin
