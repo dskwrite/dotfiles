@@ -14,3 +14,20 @@ eval "$(atuin init zsh)"
 # Example: source <(carapace _carapace zsh)
 
 # Your other Zsh settings...
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dsk/.codeium/windsurf/bin:$PATH"

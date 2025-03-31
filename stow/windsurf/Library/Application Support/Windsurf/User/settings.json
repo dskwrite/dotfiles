@@ -1,0 +1,36 @@
+{
+    /*******************************************************/
+    /* BASE SETTINGS */ 
+    /*******************************************************/
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+
+    "explorer.autoReveal": false,
+    "explorer.compactFolders": false,
+    "explorer.sortOrder": "filesFirst",
+
+    "git.enableSmartCommit": true,
+
+    "terminal.integrated.fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
+
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "workbench.hover.delay": 1,
+    "workbench.sideBar.location": "right",
+    "workbench.tree.indent": 10,
+
+
+    /*******************************************************/
+    /* WINDSURF SETTINGS */ 
+    /*******************************************************/
+    "windsurf.chatFontSize": "default",
+    "windsurf.enableTabToJump": true,
+    "windsurf.explainAndFixInCurrentConversation": true,
+    "windsurf.openRecentConversation": true,
+    "windsurf.rememberLastModelSelection": true,
+
+}

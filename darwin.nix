@@ -56,7 +56,26 @@
       upgrade = true;
     };
     brews = [
+      "atuin" 
       "azure-cli"
+      "bat" # https://github.com/sharkdp/bat
+      "carapace"
+      "cheat"
+      "chezmoi"
+      "fastfetch"
+      "fzf"
+      "gh"
+      "git"
+      "lazygit"
+      "navi"
+      "nushell"
+      "knqyf263/pet/pet"
+      "python"
+      "starship"
+      "tealdeer"
+      "tmpmail"
+      "uv"
+      "zoxide"
     ];
     casks = [
       "1password" # https://1password.com
@@ -74,6 +93,7 @@
       #docker
       "figma" # https://figma.com
       "ghostty" # https://ghostty.org
+      "git-credential-manager"
       "jordanbaird-ice" # https://icemenubar.app
       "karabiner-elements" # https://karabiner-elements.pqrs.org
       "logi-options+"  # https://www.logitech.com/en-us/software/logi-options-plus.html
@@ -86,6 +106,7 @@
       "orion" # https://kagi.com/orion
       "parallels" # https://parallels.com
       "pocket-casts" # https://pocketcasts.com
+      "powershell"
       "raycast" # https://www.raycast.com
       "reader" # https://readwise.io/read
       "setapp" # https://setapp.com
