@@ -57,67 +57,68 @@
       upgrade = true;
     };
     brews = [
-      "atuin" 
-      "azure-cli"
-      "bat"                       # https://github.com/sharkdp/bat
-      "carapace"
-      "chezmoi"                   # https://www.chezmoi.io
-      "eza"                       # https://eza.rocks
-      "fastfetch"                 # https://github.com/fastfetch-cli/fastfetch
-      "fd"                        # https://github.com/sharkdp/fd   
-      "fzf"                       # https://junegunn.github.io/fzf/
-      "gh"
-      "git"
-      "lazygit"
-      "navi"
-      "nushell"
-      "knqyf263/pet/pet"          # https://github.com/knqyf263/pet
-      "python"
-      "starship"
-      "tealdeer"                  # https://tealdeer-rs.github.io/tealdeer/
-      "tmpmail"
-      "uv"
-      "yazi"
-      "zoxide"
+      "atuin"                               # https://atuin.sh
+      "azure-cli"                           # https://docs.microsoft.com/en-us/cli/azure
+      "bat"                                 # https://github.com/sharkdp/bat
+      "carapace"                            # https://github.com/CarapaceIO/carapace
+      "chezmoi"                             # https://www.chezmoi.io
+      "eza"                                 # https://eza.rocks
+      "fastfetch"                           # https://github.com/fastfetch-cli/fastfetch
+      "fd"                                  # https://github.com/sharkdp/fd   
+      "fzf"                                 # https://junegunn.github.io/fzf/
+      "gh"                                  # https://cli.github.com
+      "git"                                 # https://git-scm.com
+      "lazygit"                             # https://github.com/jesseduffield/lazygit
+      "navi"                                # https://github.com/denisidoro/navi
+      "nushell"                             # https://www.nushell.sh
+      "knqyf263/pet/pet"                    # https://github.com/knqyf263/pet
+      "python"                              # https://www.python.org
+      "starship"                            # https://starship.rs
+      "tealdeer"                            # https://tealdeer-rs.github.io/tealdeer/
+      "uv"                                  # https://docs.astral.sh/uv/
+      "vim"                                 # https://www.vim.org
+      "yazi"                                # https://yazi-rs.github.io
+      "zoxide"                              # https://github.com/ajeetdsouza/zoxide
     ];
     casks = [
-      "1password"                # https://1password.com
-      "1password-cli"            # https://developer.1password.com/docs/cli/
-      "affinity-designer"        # https://affinity.serif.com/en-us/designer/
-      "affinity-photo"           # https://affinity.serif.com/en-us/photo/
-      "alt-tab"                  # https://alt-tab-macos.netlify.app
-      "arc"                      # https://arc.net
-      "azure-data-studio"        # https://docs.microsoft.com/en-us/sql/azure-data-studio/
-      "betterdisplay"            # https://github.com/waydabber/BetterDisplay#readme
-      "beyond-compare"           # https://scootersoftware.com
-      "cursor"                   # https://www.cursor.com/en
-      "discord"                  # http://discord.com
-      "drawio"
+      "1password"                           # https://1password.com
+      "1password-cli"                       # https://developer.1password.com/docs/cli/
+      "affinity-designer"                   # https://affinity.serif.com/en-us/designer/
+      "affinity-photo"                      # https://affinity.serif.com/en-us/photo/
+      "alt-tab"                             # https://alt-tab-macos.netlify.app
+      "arc"                                 # https://arc.net
+      "azure-data-studio"                   # https://docs.microsoft.com/en-us/sql/azure-data-studio/
+      "betterdisplay"                       # https://github.com/waydabber/BetterDisplay#readme
+      "beyond-compare"                      # https://scootersoftware.com
+      "cursor"                              # https://www.cursor.com/en
+      "discord"                             # http://discord.com
+      "drawio"                              # https://drawio.com
       #docker
-      "figma"                    # https://figma.com
-      "ghostty"                  # https://ghostty.org
-      "git-credential-manager"
-      "jordanbaird-ice"          # https://icemenubar.app
-      "karabiner-elements"       # https://karabiner-elements.pqrs.org
-      "logi-options+"            # https://www.logitech.com/en-us/software/logi-options-plus.html
-      "microsoft-azure-storage-explorer" # https://azure.microsoft.com/en-us/features/storage-explorer/
-      "microsoft-edge"           # https://www.microsoft.com/en-us/edge
-      "microsoft-teams"          # https://teams.microsoft.com
-      "miro"                     # https://miro.com
-      "notion"                   # https://notion.so
-      "obsidian"                 # https://obsidian.md
-      "orion"                    # https://kagi.com/orion
-      "parallels"                # https://parallels.com
-      "pocket-casts"             # https://pocketcasts.com
-      "powershell"
-      "raycast"                  # https://www.raycast.com
-      "reader"                   # https://readwise.io/read
-      "setapp"                   # https://setapp.com
-      "shottr"                   # https://shottr.cc
-      "visual-studio-code"       # https://code.visualstudio.com
-      "vscodium"                 # https://vscodium.com
-      "windsurf"                 # https://codeium.com/windsurf
-      "zoom"                     # https://zoom.us
+      "figma"                               # https://figma.com
+      "ghostty"                             # https://ghostty.org
+      "git-credential-manager"              # https://github.com/git-ecosystem/git-credential-manager
+      "jordanbaird-ice"                     # https://icemenubar.app
+      "karabiner-elements"                  # https://karabiner-elements.pqrs.org
+      "logi-options+"                       # https://www.logitech.com/en-us/software/logi-options-plus.html
+      "microsoft-azure-storage-explorer"    # https://azure.microsoft.com/en-us/features/storage-explorer/
+      "microsoft-edge"                      # https://www.microsoft.com/en-us/edge
+      "microsoft-teams"                     # https://teams.microsoft.com
+      "miro"                                # https://miro.com
+      "notion"                              # https://notion.so
+      "obsidian"                            # https://obsidian.md
+      "orion"                               # https://kagi.com/orion
+      "parallels"                           # https://parallels.com
+      "pocket-casts"                        # https://pocketcasts.com
+      "powershell"                          # https://github.com/PowerShell/PowerShell
+      "raycast"                             # https://www.raycast.com
+      "reader"                              # https://readwise.io/read
+      "setapp"                              # https://setapp.com
+      "shottr"                              # https://shottr.cc
+      "visual-studio-code"                  # https://code.visualstudio.com
+      "visual-studio-code@insiders"         # https://code.visualstudio.com/insiders
+      "vscodium"                            # https://vscodium.com
+      "windsurf"                            # https://codeium.com/windsurf
+      "zoom"                                # https://zoom.us
     ];
     masApps = {
       _1PasswordforSafari = 1569813296;
