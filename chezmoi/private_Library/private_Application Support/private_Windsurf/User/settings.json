@@ -1,9 +1,9 @@
 {
     /*******************************************************/
-    /* BASE SETTINGS */ 
+    /* VSCODIUM COMMON  SETTINGS */ 
     /*******************************************************/
     "editor.detectIndentation": false,
-    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.minimap.enabled": false,
 
     "explorer.autoReveal": false,
@@ -12,8 +12,10 @@
 
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-
+    
     "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', Menlo, Monaco, Consolas, 'Courier New', monospace",
+
+    "window.newWindowProfile": "Default",
 
     "workbench.activityBar.location": "hidden",
     "workbench.editor.labelFormat": "short",
@@ -28,7 +30,6 @@
     /*******************************************************/
     /* WINDSURF SETTINGS */ 
     /*******************************************************/
-    "window.newWindowProfile": "Default",
 
     "windsurf.chatFontSize": "default",
     "windsurf.enableTabToJump": true,
